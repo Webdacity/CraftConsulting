@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300,0,400;0,500;1,400&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 /* Variables */
@@ -24,6 +24,8 @@ body {
     overflow-x: hidden;
     font-family: var(--sans-serif);
     background-color: var(--dark-grey);
+    color: var(--off-white);
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -63,13 +65,65 @@ section {
     padding: 4rem 0;
 }
 
+.section-break {
+    padding: 1rem;
+}
+
 .material-icons {
     font-size: 1rem;
 }
 
 /* Reusable Styles */
 
-.button {}
+.button {
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 1.5px solid var(--green);
+    color: var(--off-white);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.button i {
+    margin-left: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--green);
+}
+
+.button:hover {
+    background-color: var(--green);
+}
+
+.button:hover i {
+    color: var(--off-white);
+}
+
+.scroll-top-button {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    background-color: var(--green);
+    border: none;
+    padding: 0.25rem 0.25rem;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-top-button i {
+    vertical-align: middle;
+    color: var(--off-white);
+}
 
 .section-heading .line {
     width: 10%;
@@ -320,6 +374,10 @@ footer a i {
 
 /* Projects Sections */
 
+.section-projects {
+    padding-bottom: 8rem;
+}
+
 .section-projects .project-types {
     list-style: none;
     display: flex;
@@ -339,4 +397,247 @@ footer a i {
 .section-projects .project-types p.active {
     color: var(--green);
     font-weight: 500;
+}
+
+
+/* Stats Section */
+
+.section-stats {
+    position: relative;
+    background-image: url("../images/backgrounds/stats-section.jpg");
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.stats-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+
+.stats-item {
+    width: 30%;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+}
+
+.stats-item h1 {
+    font-size: 6rem;
+    color: var(--green);
+    font-weight: 500;
+    padding-right: 1rem;
+    margin: 0;
+}
+
+
+
+/* About Section */
+
+.section-about {
+    background-image: url("../images/backgrounds/services-section.png");
+    background-size: 100% auto;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 8rem 0;
+}
+
+#services-heading {
+    margin-top: 6rem;
+}
+
+.section-about .content p {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.section-about .content h4 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-left: 3px solid var(--green);
+    padding-left: 1rem;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+.services-grid.alternate {
+    align-content: center;
+    margin-bottom: 0;
+}
+
+.services-grid.alternate div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem
+}
+
+.services-grid div {
+    width: 33%;
+    border-right: 2px solid var(--green);
+    padding: 0 1rem;
+}
+
+.services-grid div:last-child {
+    border-right: none
+}
+
+.services-grid h5 {
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.services-grid .heading-underline {
+    width: 60%;
+    height: 1px;
+    background-color: var(--green);
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.services-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.services-grid ul li {
+    font-size: 0.9rem;
+}
+
+.services-grid ul li span {
+    width: 0.3rem;
+    height: 0.3rem;
+    margin-right: 0.25rem;
+    background-color: var(--green);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+/* Feedback Grid */
+
+.feedback-section {
+    position: relative;
+    background-image: url("../images/backgrounds/feedback-section.jpg");
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.feedback-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+
+.feedback-item {
+    width: 33%;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.feedback-item p:first-child {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.feedback-item h5 {
+    color: var(--green);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.feedback-item h6 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin: 0.2rem 0;
+}
+
+.feedback-item p:last-child {
+    font-size: 0.7rem;
+    color: var(--green);
+    margin: 0;
+}
+
+
+
+/* COntact Section */
+
+.section-contact {
+    background-image: url("../images/backgrounds/contact-section.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 85% 50%;
+    padding-bottom: 6rem;
+    padding-top: 8rem;
+}
+
+.contact-grid {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.contact-map {
+    width: 45%;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.contact-details {
+    width: 50%;
+    border-left: 2px solid var(--green);
+    padding-left: 1rem;
+}
+
+.contact-details a {
+    display: flex;
+    color: var(--off-white);
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.contact-details a:hover {
+    color: var(--green);
+}
+
+.contact-details a i {
+    color: var(--green);
+    margin-right: 0.5rem;
+}
+
+.contact-details h4 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.contact-details h4 span {
+    color: var(--green);
+}
+
+.contact-details .button {
+    margin-top: 2rem;
 }
