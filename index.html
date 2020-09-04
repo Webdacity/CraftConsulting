@@ -14,18 +14,15 @@
 
     <!-- Website Content -->
     <title> Craft Consulting Engineers | Civil & Structural | Cape Town</title>
-    <meta name="description" content="">
-    <meta name="keywords" content="" />
+    <meta name="description" content="Economical | Pro-active | Revit Proficient | Timeous | Attentive | Craft Consulting Engineers.">
+    <meta name="keywords" content="engineering, civil, structural, engineers, cape town" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/images/logos/favicon.png">
 
     <!-- Theme Colour -->
-    <meta name="theme-color" content="#">
-    <meta name="apple-mobile-web-app-status-bar-style" content="">
-
-    <!-- Vendors -->
-    <link href="" rel="stylesheet">
+    <meta name="theme-color" content="#111111">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#111111">
 
     <!-- Internal -->
     <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
@@ -38,8 +35,33 @@
 
     <!-- Nav Bar -->
     <nav class="navbar">
-
+        <a href="./index.html">
+            <img src="./assets/images/logos/Logo-White.png" alt="">
+        </a>
+        <i class="material-icons" onclick="openNav()">menu</i>
     </nav>
+
+    <!-- Navbar Content -->
+    <div class="navbar-overlay">
+        <div class="container">
+            <i class="material-icons" onclick="closeNav()">close</i>
+
+            <div class="navbar-content">
+                <img src="./assets/images/logos/Logo-White.png" alt="">
+
+                <div class="navbar-menu">
+                    <a href="./index.html#section-projects">projects</a>
+                    <a href="./index.html#section-about">About</a>
+                    <a href="./index.html#section-services">Services</a>
+                    <a href="./index.html#section-contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="navbar-social">
+
+            </div>
+        </div>
+    </div>
 
 
     <!-- Landing Section -->
@@ -55,16 +77,16 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">Projects</a>
+                    <a href="./index.html#section-projects">Projects</a>
                 </li>
                 <li>
-                    <a href="">About</a>
+                    <a href="./index.html#section-about">About</a>
                 </li>
                 <li>
-                    <a href="">Services</a>
+                    <a href="./index.html#section-services">Services</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="./index.html#section-contact">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -85,7 +107,7 @@
 
 
     <!-- Projects Section -->
-    <section class="section-projects">
+    <section class="section-projects" id="section-projects">
         <div class="container">
 
             <!-- Section Heading -->
@@ -97,7 +119,7 @@
             </div>
 
             <div class="content">
-
+                <!-- 
                 <div class="project-types">
                     <p class="active">All</p>
                     <p>Single Residential</p>
@@ -105,19 +127,65 @@
                     <p>Mixed Use</p>
                     <p>Commercial</p>
                     <p>Industrial</p>
-                </div>
+                </div> -->
 
                 <div class="project-grid">
-                    <div class="project grid-col-1-2"></div>
-                    <div class="project"></div>
-                    <div class="project grid-row-2-3"></div>
-                    <div class="project grid-col-2-3"></div>
-                    <div class="project"></div>
-                    <div class="project"></div>
+                    <div class="project grid-col-1-2">
+                        <a class="project-inner">
+                            <h3>7 Nettleton</h3>
+                            <div class="divider-line"></div>
+                            <p> <i class="material-icons">room</i>
+                                Clifton</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-inner" href="./projects.html#7 Nettleton">
+                            <h3>7 Nettleton</h3>
+                            <div class="divider-line"></div>
+                            <p> <i class="material-icons">room</i>
+                                Clifton</p>
+                        </a>
+                    </div>
+                    <div class="project grid-row-2-3">
+                        <a class="project-inner">
+                            <h3>7 Nettleton</h3>
+                            <div class="divider-line"></div>
+                            <p> <i class="material-icons">room</i>
+                                Clifton</p>
+                        </a>
+                    </div>
+                    <div class="project grid-col-2-3">
+                        <a class="project-inner">
+                            <h3>7 Nettleton</h3>
+                            <div class="divider-line"></div>
+                            <p> <i class="material-icons">room</i>
+                                Clifton</p>
+                        </a>
+                    </div>
+                    <div class="project">
+                        <a class="project-inner">
+                            <h3>7 Nettleton</h3>
+                            <div class="divider-line"></div>
+                            <p> <i class="material-icons">room</i>
+                                Clifton</p>
+                        </a>
+                    </div>
+                    <div class="project" id="all-projects-button" onclick="window.location='./projects.html'">
+                        <p>View All Projects
+                            <i class="material-icons">search</i>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="projects-extra">
+                    <p>Visit our social media pages for the latest upcoming projects.</p>
+                    <p>Download our latest profile here:</p>
+                    <a class="button" href="./assets/documents/Craft Consulting - Profile 2020.pdf" target="blank">
+                        Download Profile
+                    </a>
                 </div>
 
             </div>
-
         </div>
     </section>
 
@@ -145,7 +213,7 @@
         </div>
     </section>
 
-    <section class="section-about">
+    <section class="section-about" id="section-about">
         <div class="container">
 
             <!-- Section Heading -->
@@ -171,7 +239,7 @@
             </div>
 
             <!-- Section Heading -->
-            <div class="section-heading" id="services-heading">
+            <div class="section-heading" id="section-services">
                 <div class="line"></div>
                 <h1>
                     SERVICES
@@ -262,7 +330,7 @@
 
 
     <!-- Contact Section -->
-    <section class="section-contact">
+    <section class="section-contact" id="section-contact">
         <div class="container">
 
             <!-- Section Heading -->
@@ -307,10 +375,27 @@
                             021 180 4372
                         </a>
                     </div>
-                    <button class="button">
+                    <button class="button" id="contact-button">
                         Send us a Message
                         <i class="material-icons"> send </i>
                     </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-modal">
+            <div class="container">
+                <i class="material-icons">close</i>
+                <div class="contact-form">
+                    <h3>Get in Touch</h3>
+                    <form netlify>
+                        <input type="text" name="Name" placeholder="Your Name">
+                        <input type="email" name="Email" placeholder="Your Email">
+                        <textarea placeholder="Your Message" rows=5 name="Message"></textarea>
+                        <button class="button" type="submit">
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

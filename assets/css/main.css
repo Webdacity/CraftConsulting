@@ -1,5 +1,5 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300,0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
 /* Variables */
@@ -17,7 +17,6 @@
 /* ---------------- */
 /* GENERAL */
 
-html,
 body {
     margin: 0;
     padding: 0;
@@ -26,6 +25,10 @@ body {
     background-color: var(--dark-grey);
     color: var(--off-white);
     scroll-behavior: smooth;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 .container {
@@ -72,6 +75,125 @@ section {
 .material-icons {
     font-size: 1rem;
 }
+
+
+/* Navigation */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--dark-grey);
+    width: 100%;
+    height: 4rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    -webkit-box-shadow: 0px 8px 10px 2px rgba(17, 17, 1, 0.25);
+    -moz-box-shadow: 0px 8px 10px 2px rgba(17, 17, 1, 0.25);
+    box-shadow: 0px 8px 10px 2px rgba(17, 17, 1, 0.25);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.navbar img {
+    display: block;
+    height: 2.5rem
+}
+
+.navbar i {
+    padding: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.navbar i:hover {
+    color: var(--green);
+}
+
+.navbar-overlay {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--dark-grey);
+    background-image: url("../images/backgrounds/services-section.png");
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: 20;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-overlay i {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.navbar-overlay i:hover {
+    color: var(--green);
+}
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar-content img {
+    width: 20%;
+    margin-bottom: 3rem;
+}
+
+.navbar-menu {
+    z-index: 25;
+    border-left: 3px solid var(--green);
+    display: flex;
+    flex-direction: column;
+    padding-left: 2rem;
+}
+
+.navbar-menu a {
+    color: var(--off-white);
+    text-decoration: none;
+    margin: 0.3rem 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.navbar-menu a:hover {
+    color: var(--green);
+}
+
 
 /* Reusable Styles */
 
@@ -137,31 +259,16 @@ section {
     color: white;
 }
 
-
-/* Project Grid */
-.project-grid {
-    display: grid;
-    grid-template: repeat(3, 35vh) / repeat(3, 1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
-    margin-top: 2rem;
+.section-heading.projects-heading h1 {
+    font-weight: 400;
 }
 
-.project {
-    background-color: var(--grey);
+.section-heading.projects-heading h1 span {
+    font-weight: 500;
 }
 
-.grid-col-1-2 {
-    grid-column: 1 / span 2;
-}
 
-.grid-col-2-3 {
-    grid-column: 2 / span 2;
-}
 
-.grid-row-2-3 {
-    grid-row: 2 / span 2;
-}
 
 
 /* Scrollbar  */
@@ -399,6 +506,144 @@ footer a i {
     font-weight: 500;
 }
 
+.projects-extra {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.projects-extra p {
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
+
+.projects-extra .button {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template: repeat(3, 35vh) / repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    margin-top: 2rem;
+}
+
+.project {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../images/projects/NETT\ \(13\).jpg");
+}
+
+.grid-col-1-2 {
+    grid-column: 1 / span 2;
+}
+
+.grid-col-2-3 {
+    grid-column: 2 / span 2;
+}
+
+.grid-row-2-3 {
+    grid-row: 2 / span 2;
+}
+
+.project-inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(17, 17, 17, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.75s ease;
+    -webkit-transition: 0.75s ease;
+    -moz-transition: 0.75s ease;
+    -ms-transition: 0.75s ease;
+    -o-transition: 0.75s ease;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.project-inner h3 span {
+    font-weight: 600;
+}
+
+.project-inner h3 span:nth-child(2) {
+    color: var(--green);
+}
+
+.project h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--off-white);
+}
+
+.project p {
+    font-size: 0.9rem;
+    color: var(--green);
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.project p i {
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+}
+
+.project:hover .project-inner {
+    opacity: 1;
+}
+
+
+.project .divider-line {
+    width: 40%;
+    height: 2px;
+    background-color: var(--off-white);
+}
+
+
+#all-projects-button {
+    border: 2px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    background-color: var(--black-grey);
+    background-image: none;
+    cursor: pointer;
+}
+
+#all-projects-button:hover {
+    background-color: var(--green);
+}
+
+#all-projects-button p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: var(--off-white);
+}
+
+
+#all-projects-button p i {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+
+
 
 /* Stats Section */
 
@@ -443,7 +688,7 @@ footer a i {
     padding: 8rem 0;
 }
 
-#services-heading {
+#section-services {
     margin-top: 6rem;
 }
 
@@ -640,4 +885,276 @@ footer a i {
 
 .contact-details .button {
     margin-top: 2rem;
+}
+
+.contact-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(17, 17, 17, 0.95);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.contact-modal i {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.contact-modal i:hover {
+    color: var(--green);
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: transparent;
+    width: 60%;
+    border: 1px solid var(--green);
+    padding: 0.5rem;
+    color: var(--off-white);
+    margin: 0.5rem 0;
+    resize: none;
+    font-family: var(--sans-serif);
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    color: var(--green);
+    border-color: var(--off-white);
+}
+
+
+
+
+/*  ------------------- */
+/* PROJECTS PAGE */
+
+.projects-page .section-projects {
+    margin-top: 5rem;
+}
+
+.projects-page .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin-bottom: 5rem;
+}
+
+.projects-page .project {
+    height: 40vh;
+    width: 31%;
+    margin-bottom: 2%;
+}
+
+.project-modal {
+    z-index: 25;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: var(--black-grey);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: scroll;
+    padding: 5rem 0;
+    display: none;
+}
+
+.project-modal-grid {
+    display: flex;
+    justify-content: space-between
+}
+
+.project-details {
+    width: 35%;
+}
+
+.project-name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-left: 4px solid var(--green);
+    margin: 0 0 1.5rem 0;
+    padding-left: 1rem;
+}
+
+.project-details p {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.project-details i {
+    color: var(--green);
+    margin-right: 0.5rem;
+}
+
+.project-association {
+    margin-top: 2rem !important;
+}
+
+.project-logos {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+
+.project-logos img {
+    width: 50%;
+    display: block;
+    margin: 1rem 0;
+}
+
+.close-project-modal,
+.close-project-image-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.close-project-modal:hover,
+.close-project-image-modal:hover {
+    color: var(--green);
+}
+
+.project-images {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.project-images div {
+    /* background-image: url("../images/projects/NETT\ \(13\).jpg");
+    background-position: center center;
+    background-size: cover; */
+    width: 49%;
+    height: 40vh;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    overflow: hidden;
+}
+
+.project-images div:hover {
+    opacity: 0.5;
+}
+
+.project-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.project-image-modal {
+    z-index: 30;
+    width: 0;
+    height: 100%;
+    background-color: var(--black-grey);
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+}
+
+.project-image-modal.active {
+    width: 100%;
+}
+
+.project-image-modal .content {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+}
+
+
+.project-image-modal .image {
+    width: 90%;
+    height: 100%;
+}
+
+.project-image-modal .image img {
+    max-height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.image-arrow {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.image-arrow i {
+    font-size: 1.5rem;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+
+.image-arrow i:hover {
+    color: var(--green);
 }

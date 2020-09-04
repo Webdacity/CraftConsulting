@@ -1,0 +1,137 @@
+[{
+        "name": "7 Nettleton",
+        "location": "7 Nettleton Road, Clifton",
+        "date": "2018",
+        "association": ["SOATA", "Moroff&Kuhne"],
+        "type": "Single Residential",
+        "images": 17
+    },
+    {
+        "name": "OVD 519",
+        "location": "519 Ocean View Drive, Fresnaye",
+        "date": "2019",
+        "association": ["RobertSilke", "S&T-Consulting"],
+        "type": "Single Residential",
+        "images": 9
+
+    },
+    {
+        "name": "Pointe Noire",
+        "location": "Pointe Noire, Republic of the Congo",
+        "date": "2018",
+        "association": ["SOATA", "Moroff&Kuhne"],
+        "type": "Single Residential",
+        "images": 7
+
+    },
+    {
+        "name": "Invermark",
+        "location": "Invermark Crescent, Higgovale",
+        "date": "2017",
+        "association": ["SOATA", "Moroff&Kuhne"],
+        "type": "Single Residential",
+        "images": 4
+
+    },
+    {
+        "name": "32 De Wet",
+        "location": "De Wet Road, Bantry Bay",
+        "date": "2018",
+        "association": ["SOATA", "Moroff&Kuhne"],
+        "type": "Single Residential",
+        "images": 1
+    },
+    {
+        "name": "The Belair",
+        "location": "Belair Road, Vredehoek",
+        "date": "2018",
+        "association": ["BBB-Architects", "S&T-Consulting"],
+        "type": "Multi Residential",
+        "images": 3
+    },
+    {
+        "name": "The Solis",
+        "location": "7 Main Drive, Sea Point",
+        "date": "2018",
+        "association": ["BBB-Architects", "S&T-Consulting"],
+        "type": "Multi Residential",
+        "images": 1
+    },
+    {
+        "name": "The Residence",
+        "location": "Chepstow Road, Green Point",
+        "date": "2016",
+        "association": ["Flux-Architects", "Moroff&Kuhne"],
+        "type": "Multi Residential",
+        "images": 6
+    }, {
+        "name": "Brazzaville",
+        "location": "Brazzaville, Republic of the Congo",
+        "date": "2018",
+        "association": ["SOATA", "Moroff&Kuhne"],
+        "type": "Multi Use",
+        "images": 5
+    }, {
+        "name": "Glengariff",
+        "location": "Cnr Glengariff & Main Road, Sea Point",
+        "date": "2019",
+        "association": ["BBB-Architects", "S&T-Consulting"],
+        "type": "Multi Use",
+        "images": 1
+    }, {
+        "name": "339 on Main",
+        "location": "339 on Main Road, Sea Point",
+        "date": "2019",
+        "association": ["IDC-Architects", "S&T-Consulting"],
+        "type": "Multi Use",
+        "images": 1
+    },
+    {
+        "name": "Kirchpharma",
+        "location": "Salzgitter, Germany",
+        "date": "2017",
+        "association": ["SOATA", "Moroff&Kuhne"],
+        "type": "Commercial",
+        "images": 9
+    },
+    {
+        "name": "ARB",
+        "location": "N1 Industrial Park, Polokwane",
+        "date": "2017",
+        "association": ["WicusPretorius", "S&T-Consulting"],
+        "type": "Commercial",
+        "images": 3
+    },
+    {
+        "name": "Roadmac",
+        "location": "Wimbledon Estate, Blackheath",
+        "date": "2017",
+        "association": ["Moroff&Kuhne"],
+        "type": "Commercial",
+        "images": 1
+    },
+    {
+        "name": "Bulk Solvent Store",
+        "location": "Fine Chemicals Company, Epping Industrial",
+        "date": "2017",
+        "association": ["Moroff&Kuhne"],
+        "type": "Industrial",
+        "images": 14
+    },
+    {
+        "name": "Waste Yard",
+        "location": "Fine Chemicals Company, Epping Industrial ",
+        "date": "2017",
+        "association": ["Moroff&Kuhne"],
+        "type": "Industrial",
+        "images": 14
+    },
+    {
+        "name": "General Industrial",
+        "location": "Fine Chemicals Company, Epping Industrial ",
+        "date": "2017",
+        "association": ["Moroff&Kuhne"],
+        "type": "Industrial",
+        "images": 1
+    }
+]
