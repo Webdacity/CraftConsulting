@@ -86,6 +86,10 @@
     .stats-item {
         width: 40%;
     }
+
+    .section-landing .content img {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -147,6 +151,10 @@
 
     .stats-item h1 {
         font-size: 4rem;
+    }
+
+    .section-landing .content img {
+        width: 70%;
     }
 }
 
