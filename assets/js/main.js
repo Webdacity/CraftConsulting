@@ -19,12 +19,12 @@ $(document).scroll(() => {
 $("#contact-button").click(() => {
     $(".contact-modal").fadeIn(1000);
     $(".contact-modal").css("display", "flex");
-    $("body").addClass("no-scroll");
+    $("html, body").addClass("no-scroll");
 });
 
 $(".contact-modal i").click(() => {
     $(".contact-modal").fadeOut(1000);
-    $("body").removeClass("no-scroll")
+    $("html, body").removeClass("no-scroll")
 });
 
 
@@ -33,12 +33,12 @@ $(".contact-modal i").click(() => {
 const openNav = () => {
     $(".navbar-overlay").fadeIn(1000);
     $(".navbar-overlay").css("display", "flex");
-    $("body").addClass("no-scroll");
+    $("html, body").addClass("no-scroll");
 }
 
 const closeNav = () => {
     $(".navbar-overlay").fadeOut(1000);
-    $("body").removeClass("no-scroll")
+    $("html, body").removeClass("no-scroll")
 }
 
 $(".navbar-content a").click(() => {
@@ -64,6 +64,21 @@ $(document).scroll(() => {
 });
 
 
+// Loader
+
+const showLoader = () => {
+    $(".loader").fadeIn(1000)
+}
+
+const hideLoader = () => {
+    $(".loader").fadeOut(1000)
+}
+
+window.onload = (event) => {
+    hideLoader()
+};
+
+
 
 // ----------------------------------------
 // PROJECTS
@@ -77,7 +92,6 @@ const loadAllProjects = () => {
         })
         .then(result => {
             projects = result.data;
-            console.log(projects)
 
             projects.forEach(project => {
                 let projectGrid = project.type.replace(" ", "-") + "-grid";
@@ -94,7 +108,6 @@ const loadAllProjects = () => {
                     </div>
                 `)
             })
-
 
         })
         .catch(err => {
@@ -113,13 +126,13 @@ let currentHash = window.location.hash;
 
 const closeProjectModal = () => {
     $(".project-modal").fadeOut(1000)
-    $("body").removeClass("no-scroll");
+    $("html, body").removeClass("no-scroll");
     location.hash = ""
 }
 
 const loadProject = () => {
     $(".project-modal").fadeIn(1000);
-    $("body").addClass("no-scroll");
+    $("html, body").addClass("no-scroll");
 
     axios({
             method: "get",
@@ -164,13 +177,15 @@ const loadProject = () => {
                 </div>
                 `)
             }
+
         })
         .catch(err => {
             console.log(err)
         })
 }
 
-if (currentHash !== "" && window.location.pathname === "./projects.html") {
+if (currentHash !== "" && window.location.pathname === "/projects.html") {
+    console.log(true)
     loadProject()
 }
 

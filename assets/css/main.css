@@ -30,7 +30,7 @@ body {
     scroll-behavior: smooth;
 }
 
-body.no-scroll {
+.no-scroll {
     overflow: hidden;
 }
 
@@ -391,6 +391,47 @@ footer a i {
 
 .footer-copy p a:hover {
     color: var(--green);
+}
+
+
+/* Loader */
+
+.loader {
+    background-color: var(--black-grey);
+    z-index: 50;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+
+.loader div {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader img {
+    width: 5rem;
+    animation-name: loader;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+
+@keyframes loader {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 
