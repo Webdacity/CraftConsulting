@@ -33,10 +33,12 @@ $(".contact-modal i").click(() => {
 const openNav = () => {
     $(".navbar-overlay").fadeIn(1000);
     $(".navbar-overlay").css("display", "flex");
+    $("body").addClass("no-scroll");
 }
 
 const closeNav = () => {
     $(".navbar-overlay").fadeOut(1000);
+    $("body").removeClass("no-scroll")
 }
 
 $(".navbar-content a").click(() => {
@@ -102,7 +104,7 @@ const loadAllProjects = () => {
 
 
 if (window.location.pathname === "/projects.html") {
-    loadAllProjects()
+    loadAllProjects();
 }
 
 
@@ -168,7 +170,7 @@ const loadProject = () => {
         })
 }
 
-if (currentHash !== "") {
+if (currentHash !== "" && window.location.pathname === "./projects.html") {
     loadProject()
 }
 
@@ -179,9 +181,11 @@ if (window.location.pathname === "/projects.html") {
 }
 
 $(window).on("hashchange", () => {
-    currentHash = window.location.hash;
-    if (currentHash !== "") {
-        loadProject()
+    if (window.location.pathname === "./projects.html") {
+        currentHash = window.location.hash;
+        if (currentHash !== "") {
+            loadProject()
+        }
     }
 })
 

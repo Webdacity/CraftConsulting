@@ -16,6 +16,9 @@
 
 /* ---------------- */
 /* GENERAL */
+html {
+    overflow-x: hidden;
+}
 
 body {
     margin: 0;
@@ -132,6 +135,8 @@ section {
     background-position: top center;
     background-repeat: no-repeat;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 20;
     display: none;
     justify-content: center;
@@ -307,14 +312,14 @@ footer {
 }
 
 .footer-logo {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .footer-logo img {
-    width: 75%;
+    width: 65%;
 }
 
 footer a {
@@ -347,6 +352,16 @@ footer a i {
     flex-direction: column;
     border-left: 2px solid var(--green);
     padding-left: 1rem;
+}
+
+.home-footer .footer-contact a:nth-child(1),
+.home-footer .footer-contact a:nth-child(2) {
+    display: none;
+}
+
+.footer-contact img {
+    width: 0.8rem;
+    margin-right: 0.5rem;
 }
 
 
@@ -478,6 +493,21 @@ footer a i {
 }
 
 
+.landing-social {
+    z-index: 5;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-social a img {
+    width: 1.4rem;
+    margin: 0.25rem 0;
+}
+
+
 
 /* Projects Sections */
 
@@ -531,12 +561,6 @@ footer a i {
     column-gap: 1rem;
     row-gap: 1rem;
     margin-top: 2rem;
-}
-
-.project {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url("../images/projects/NETT\ \(13\).jpg");
 }
 
 .grid-col-1-2 {
@@ -625,6 +649,11 @@ footer a i {
     cursor: pointer;
 }
 
+#all-projects-button .project-inner {
+    opacity: 1;
+    background-color: transparent;
+}
+
 #all-projects-button:hover {
     background-color: var(--green);
 }
@@ -641,6 +670,37 @@ footer a i {
     margin-left: 0.5rem;
     font-size: 1rem;
 }
+
+#all-projects-button a {
+    text-decoration: none;
+}
+
+.project {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#project-home-OVD-519 {
+    background-image: url("../images/projects/Single Residential/OVD 519/OVD 519 (1).jpg");
+}
+
+#project-home-nettleton {
+    background-image: url("../images/projects/Single Residential/7 Nettleton/7 Nettleton (1).jpg");
+}
+
+#project-home-brazzaville {
+    background-image: url("../images/projects/Multi Use/Brazzaville/Brazzaville (3).jpg");
+}
+
+#project-home-glengariff {
+    background-image: url("../images/projects/Multi Use/Glengariff/Glengariff (1).jpg");
+}
+
+#project-home-kirchpharma {
+    background-image: url("../images/projects/Commercial/Kirchpharma/Kirchpharma (2).jpg");
+}
+
 
 
 
@@ -968,14 +1028,12 @@ footer a i {
 .projects-page .project-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2%;
     margin-bottom: 5rem;
 }
 
 .projects-page .project {
     height: 40vh;
     width: 31%;
-    margin-bottom: 2%;
 }
 
 .project-modal {
@@ -995,7 +1053,8 @@ footer a i {
 
 .project-modal-grid {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .project-details {
@@ -1134,9 +1193,12 @@ footer a i {
 }
 
 .project-image-modal .image img {
+    position: relative;
+    max-width: 100%;
     max-height: 100%;
-    display: block;
-    margin: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .image-arrow {
