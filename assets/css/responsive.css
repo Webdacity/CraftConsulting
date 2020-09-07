@@ -163,5 +163,6 @@
     /* Turn Off Project Inner Hover for Touch Devices */
     .project-inner {
         opacity: 1;
+        background-color: rgba(17, 17, 17, 0.75);
     }
 }
