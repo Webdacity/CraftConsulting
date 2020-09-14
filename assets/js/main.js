@@ -1,4 +1,4 @@
-// ANIMATIONS
+// UI
 
 
 // Scroll To Top Button
@@ -28,16 +28,6 @@ $(".contact-modal i").click(() => {
 });
 
 
-// Navbar
-
-const openNav = () => {
-
-}
-
-const closeNav = () => {
-
-}
-
 // Loader
 
 const showLoader = () => {
@@ -52,144 +42,27 @@ window.onload = (event) => {
     hideLoader()
 };
 
+// Projects
 
-
-// ----------------------------------------
-// PROJECTS
-
-// Load All Projects
-
-const loadAllProjects = () => {
-    axios({
-            method: "get",
-            url: "../../assets/js/projects.json"
-        })
-        .then(result => {
-            projects = result.data;
-
-            projects.forEach(project => {
-                let projectGrid = project.type.replace(" ", "-") + "-grid";
-                let projectLocation = project.location;
-                projectLocation = projectLocation.substring(projectLocation.indexOf(", ") + 2)
-                $(`#${projectGrid}`).append(`
-                    <div class="project" style="background-image: url('./assets/images/projects/${project.type}/${project.name}/${project.name} (1).jpg');">
-                        <a class="project-inner" href="./projects.html#${project.name}">
-                            <h3>${project.name}</h3>
-                            <div class="divider-line"></div>
-                            <p> <i class="material-icons">room</i>
-                                ${projectLocation}</p>
-                        </a>
-                    </div>
-                `)
-            })
-
-        })
-        .catch(err => {
-            console.log(err)
-        })
-}
-
-
-if (window.location.pathname === "/projects.html") {
-    loadAllProjects();
-}
-
-
-// Project Modal
-let currentHash = window.location.hash;
-
-const closeProjectModal = () => {
-    $(".project-modal").fadeOut(1000)
-    $("html, body").removeClass("no-scroll");
-    location.hash = ""
-}
-
-const loadProject = () => {
-    $(".project-modal").fadeIn(1000);
-    $("html, body").addClass("no-scroll");
-
-    axios({
-            method: "get",
-            url: "../../assets/js/projects.json"
-        })
-        .then(result => {
-            projects = result.data;
-
-            currentHash = window.location.hash;
-            let projectNameToLoad = currentHash.replace("#", "");
-            projectNameToLoad = projectNameToLoad.replace(/%20/g, " ");
-
-            const project = projects.find(project => project.name === projectNameToLoad);
-
-            if (project === undefined) {
-                return closeProjectModal()
-            }
-
-            // Insert Data
-            $(".project-name").html(project.name)
-            $(".project-type span").html(project.type)
-            $(".project-date span").html(project.date)
-            $(".project-location span").html(project.location);
-
-            // Insert Project Images
-            $(".project-logos").empty();
-            project.association.forEach(image => {
-                $(".project-logos").append(
-                    `
-                    <img src="./assets/images/project-logos/${image}.png" alt="${image}" title="${image}">
-                    `
-                )
-            })
-
-            // Insert Project Images
-            $(".project-modal .project-images").empty();
-
-            for (let i = 1; i <= project.images; i++) {
-                $(".project-modal .project-images").append(`
-                <div>
-                <img src='./assets/images/projects/${project.type}/${project.name}/${project.name} (${i}).jpg'>  
-                </div>
-                `)
-            }
-
-        })
-        .catch(err => {
-            console.log(err)
-        })
-}
-
-if (currentHash !== "" && window.location.pathname === "/projects.html") {
-    console.log(true)
-    loadProject()
-}
-
-if (window.location.pathname === "/projects.html") {
-    $(document).on("click", ".project-grid .project-inner", () => {
-        loadProject();
-    })
-}
-
-$(window).on("hashchange", () => {
-    if (window.location.pathname === "./projects.html") {
-        currentHash = window.location.hash;
-        if (currentHash !== "") {
-            loadProject()
-        }
-    }
-})
-
-
-// Project Image Modal
-
-$(document).on("click", ".project-images div img", function () {
-    let imageUrl = $(this).attr("src")
-    console.log(imageUrl)
-    $(".project-image-modal").addClass("active");
-
-    // Insert Image
-    $(".project-image-modal .image img").attr("src", imageUrl)
+$(".project-types p").click(function () {
+    $(".project-types p").removeClass("active")
+    $(this).addClass("active");
+    updateProjectsGrid($(this).html());
 });
 
-const closeProjectImageModal = () => {
-    $(".project-image-modal").removeClass("active");
+const updateProjectsGrid = (type) => {
+    let projectType = type.toLowerCase();
+    projectType = projectType.replace(" ", "-");
+
+    if (projectType == "all") {
+        $(".project-grid").fadeOut();
+        $(".project-grid").removeClass("active");
+        $(".home-project-grid").fadeIn()
+    } else {
+        $(`.project-grid`).css("display", "none");
+        $(".home-project-grid").fadeOut();
+        $(`#${projectType}-grid`).fadeIn()
+        $(`#${projectType}-grid`).css("display", "grid");
+    }
+
 }

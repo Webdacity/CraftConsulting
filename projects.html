@@ -69,17 +69,17 @@
             </div>
 
             <div class="content">
-                <!-- 
-                    <div class="project-types">
-                        <p class="active">All</p>
-                        <p>Single Residential</p>
-                        <p>Multi Residential</p>
-                        <p>Mixed Use</p>
-                        <p>Commercial</p>
-                        <p>Industrial</p>
-                    </div> -->
 
-                <div class="project-grid" id="home-project-grid">
+                <div class="project-types">
+                    <p class="active">All</p>
+                    <p>Single Residential</p>
+                    <p>Multi Residential</p>
+                    <p>Mixed Use</p>
+                    <p>Commercial</p>
+                    <p>Industrial</p>
+                </div>
+
+                <div class="home-project-grid" id="home-project-grid">
                     <div class="project grid-col-1-2" id="project-home-brazzaville">
                         <a class="project-inner" href="./projects.html#Brazzaville">
                             <h3>Brazzaville</h3>
@@ -120,92 +120,34 @@
                                 Fresnaye</p>
                         </a>
                     </div>
-                    <div class="project" id="all-projects-button">
-                        <a class="project-inner" href="./projects.html">
-                            <p>View All Projects
-                                <i class="material-icons">search</i>
-                            </p>
+                    <div class="project" id="project-home-solis">
+                        <a class="project-inner" href="./projects.html#The Solis">
+                            <h3>The Solis</h3>
+                            <div class=" divider-line"></div>
+                            <p> <i class="material-icons">room</i>
+                                Sea Point</p>
                         </a>
                     </div>
                 </div>
 
-                <div class="projects-extra">
-                    <p>Visit our social media pages for the latest upcoming projects.</p>
-                    <p>Download our latest profile here:</p>
-                    <a class="button" href="./assets/documents/Craft Consulting - Profile 2020.pdf" target="blank">
-                        Download Profile
-                    </a>
-                </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section-projects">
-        <div class="container">
-
-
-
-            <div class="content">
-
-                <!-- Section Heading -->
-                <div class="section-heading projects-heading">
-                    <div class="line"></div>
-                    <h1>
-                        <span>Single Residential</span> Projects
-                    </h1>
-                </div>
-
-                <div class="project-grid" id="Single-Residential-grid">
+                <div class="project-grid" id="single-residential-grid">
 
                 </div>
 
-                <!-- Section Heading -->
-                <div class="section-heading projects-heading">
-                    <div class="line"></div>
-                    <h1>
-                        <span>Multi Residential</span> Projects
-                    </h1>
-                </div>
-
-                <div class="project-grid" id="Multi-Residential-grid">
+                <div class="project-grid" id="multi-residential-grid">
 
                 </div>
 
-                <!-- Section Heading -->
-                <div class="section-heading projects-heading">
-                    <div class="line"></div>
-                    <h1>
-                        <span>Mutli Use</span> Projects
-                    </h1>
-                </div>
-
-                <div class="project-grid" id="Multi-Use-grid">
+                <div class="project-grid" id="mixed-use-grid">
 
                 </div>
 
-                <!-- Section Heading -->
-                <div class="section-heading projects-heading">
-                    <div class="line"></div>
-                    <h1>
-                        <span>Commercial</span> Projects
-                    </h1>
-                </div>
-
-                <div class="project-grid" id="Commercial-grid">
+                <div class="project-grid" id="commercial-grid">
 
                 </div>
 
-                <!-- Section Heading -->
-                <div class="section-heading projects-heading">
-                    <div class="line"></div>
-                    <h1>
-                        <span>Industrial</span> Projects
-                    </h1>
-                </div>
-
-                <div class="project-grid" id="Industrial-grid">
+                <div class="project-grid" id="industrial-grid">
 
                 </div>
 
@@ -220,8 +162,6 @@
             </div>
         </div>
     </section>
-
-
 
 
     <!-- Project Modal -->
@@ -252,8 +192,18 @@
                 </div>
 
                 <div class="project-images">
+                    <div class="project-images-grid">
 
+                    </div>
+
+                    <div class="project-images-construction">
+                        <h1>Construction</h1>
+                        <div class="project-images-construction-grid">
+
+                        </div>
+                    </div>
                 </div>
+
             </div>
 
         </div>
@@ -263,15 +213,15 @@
     <div class="project-image-modal">
         <div class="content">
             <i class="material-icons close-project-image-modal" onclick="closeProjectImageModal()">close</i>
-            <div class="image-arrow" id="image-left">
+            <!-- <div class="image-arrow" id="image-left">
                 <i class="material-icons">keyboard_arrow_left</i>
-            </div>
+            </div> -->
             <div class="image">
                 <img>
             </div>
-            <div class="image-arrow" id="image-right">
+            <!-- <div class="image-arrow" id="image-right">
                 <i class="material-icons">keyboard_arrow_right</i>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -340,6 +290,8 @@
     <!-- <script src="../../../../Code Vendors/jquery/jquery-3.4.1.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/projects.js"></script>
+
 
 </body>
 

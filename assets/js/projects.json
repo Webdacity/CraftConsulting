@@ -39,7 +39,8 @@
         "date": "2018",
         "association": ["SOATA", "Moroff&Kuhne"],
         "type": "Single Residential",
-        "images": 1
+        "images": 1,
+        "construction": 6
     },
     {
         "name": "The Belair",
@@ -47,7 +48,8 @@
         "date": "2018",
         "association": ["BBB-Architects", "S&T-Consulting"],
         "type": "Multi Residential",
-        "images": 3
+        "images": 3,
+        "construction": 8
     },
     {
         "name": "The Solis",
@@ -55,7 +57,8 @@
         "date": "2018",
         "association": ["BBB-Architects", "S&T-Consulting"],
         "type": "Multi Residential",
-        "images": 1
+        "images": 1,
+        "construction": 10
     },
     {
         "name": "The Residence",
@@ -69,22 +72,24 @@
         "location": "Brazzaville, Republic of the Congo",
         "date": "2018",
         "association": ["SOATA", "Moroff&Kuhne"],
-        "type": "Multi Use",
+        "type": "Mixed Use",
         "images": 5
     }, {
         "name": "Glengariff",
         "location": "Cnr Glengariff & Main Road, Sea Point",
         "date": "2019",
         "association": ["BBB-Architects", "S&T-Consulting"],
-        "type": "Multi Use",
-        "images": 1
+        "type": "Mixed Use",
+        "images": 1,
+        "construction": 10
     }, {
         "name": "339 on Main",
         "location": "339 on Main Road, Sea Point",
         "date": "2019",
         "association": ["IDC-Architects", "S&T-Consulting"],
-        "type": "Multi Use",
-        "images": 1
+        "type": "Mixed Use",
+        "images": 1,
+        "construction": 11
     },
     {
         "name": "Kirchpharma",
@@ -103,6 +108,15 @@
         "images": 3
     },
     {
+        "name": "Roadmac",
+        "location": "Wimbledon Estate, Blackheath",
+        "date": "2017",
+        "association": ["Moroff & Kuhne"],
+        "type": "Commercial",
+        "images": 2,
+        "construction": 6
+    },
+    {
         "name": "Bulk Solvent Store",
         "location": "Fine Chemicals Company, Epping Industrial",
         "date": "2017",
@@ -116,7 +130,7 @@
         "date": "2017",
         "association": ["Moroff&Kuhne"],
         "type": "Industrial",
-        "images": 14
+        "images": 4
     },
     {
         "name": "General Industrial",

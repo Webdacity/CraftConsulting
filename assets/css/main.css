@@ -543,197 +543,6 @@ footer a i {
 
 
 
-/* Projects Sections */
-
-.section-projects {
-    padding-bottom: 8rem;
-}
-
-.section-projects .project-types {
-    list-style: none;
-    display: flex;
-}
-
-
-.section-projects .project-types p {
-    text-transform: uppercase;
-    color: var(--grey);
-    padding-right: 1rem;
-    font-size: 0.9rem;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    margin: 0;
-}
-
-.section-projects .project-types p.active {
-    color: var(--green);
-    font-weight: 500;
-}
-
-.projects-extra {
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.projects-extra p {
-    font-weight: 300;
-    font-size: 0.9rem;
-    margin: 0.25rem 0;
-}
-
-.projects-extra .button {
-    display: inline-block;
-    margin-top: 1rem;
-    text-decoration: none;
-}
-
-
-/* Project Grid */
-.project-grid {
-    display: grid;
-    grid-template: repeat(3, 35vh) / repeat(3, 1fr);
-    column-gap: 1rem;
-    row-gap: 1rem;
-    margin-top: 2rem;
-}
-
-.grid-col-1-2 {
-    grid-column: 1 / span 2;
-}
-
-.grid-col-2-3 {
-    grid-column: 2 / span 2;
-}
-
-.grid-row-2-3 {
-    grid-row: 2 / span 2;
-}
-
-.project-inner {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(17, 17, 17, 0.85);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.75s ease;
-    -webkit-transition: 0.75s ease;
-    -moz-transition: 0.75s ease;
-    -ms-transition: 0.75s ease;
-    -o-transition: 0.75s ease;
-    opacity: 0;
-    text-decoration: none;
-}
-
-.project-inner h3 span {
-    font-weight: 600;
-}
-
-.project-inner h3 span:nth-child(2) {
-    color: var(--green);
-}
-
-.project h3 {
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--off-white);
-}
-
-.project p {
-    font-size: 0.9rem;
-    color: var(--green);
-    margin-top: 0.5rem;
-    display: flex;
-    align-items: center;
-
-}
-
-.project p i {
-    font-size: 0.8rem;
-    margin-right: 0.25rem;
-}
-
-.project:hover .project-inner {
-    opacity: 1;
-}
-
-
-.project .divider-line {
-    width: 40%;
-    height: 2px;
-    background-color: var(--off-white);
-}
-
-
-#all-projects-button {
-    border: 2px solid var(--green);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s ease;
-    -webkit-transition: 0.5s ease;
-    -moz-transition: 0.5s ease;
-    -ms-transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    background-color: var(--black-grey);
-    background-image: none;
-    cursor: pointer;
-}
-
-#all-projects-button .project-inner {
-    opacity: 1;
-    background-color: transparent;
-}
-
-#all-projects-button:hover {
-    background-color: var(--green);
-}
-
-#all-projects-button p {
-    margin: 0;
-    display: flex;
-    align-items: center;
-    color: var(--off-white);
-}
-
-
-#all-projects-button p i {
-    margin-left: 0.5rem;
-    font-size: 1rem;
-}
-
-#all-projects-button a {
-    text-decoration: none;
-}
-
-.project {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-#project-home-OVD-519 {
-    background-image: url("../images/projects/Single Residential/OVD 519/OVD 519 (1).jpg");
-}
-
-#project-home-nettleton {
-    background-image: url("../images/projects/Single Residential/7 Nettleton/7 Nettleton (1).jpg");
-}
-
-#project-home-brazzaville {
-    background-image: url("../images/projects/Multi Use/Brazzaville/Brazzaville (3).jpg");
-}
-
-#project-home-glengariff {
-    background-image: url("../images/projects/Multi Use/Glengariff/Glengariff (1).jpg");
-}
-
-#project-home-kirchpharma {
-    background-image: url("../images/projects/Commercial/Kirchpharma/Kirchpharma (2).jpg");
-}
 
 
 
@@ -1096,19 +905,216 @@ footer a i {
 /*  ------------------- */
 /* PROJECTS PAGE */
 
-.projects-page .section-projects {
-    margin-top: 5rem;
+
+/* Projects Sections */
+
+.section-projects {
+    padding: 6rem 0;
 }
 
-.projects-page .project-grid {
+.section-projects .project-types {
+    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 5rem;
 }
 
-.projects-page .project {
-    height: 40vh;
-    width: 31%;
+
+.section-projects .project-types p {
+    text-transform: uppercase;
+    color: var(--grey);
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.section-projects .project-types p.active {
+    color: var(--green);
+    font-weight: 500;
+}
+
+.projects-extra {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.projects-extra p {
+    font-weight: 300;
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+}
+
+.projects-extra .button {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+
+/* Project Grid */
+.home-project-grid {
+    display: grid;
+    grid-template: repeat(3, 35vh) / repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.grid-col-1-2 {
+    grid-column: 1 / span 2;
+}
+
+.grid-col-2-3 {
+    grid-column: 2 / span 2;
+}
+
+.grid-row-2-3 {
+    grid-row: 2 / span 2;
+}
+
+.project-inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(17, 17, 17, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.75s ease;
+    -webkit-transition: 0.75s ease;
+    -moz-transition: 0.75s ease;
+    -ms-transition: 0.75s ease;
+    -o-transition: 0.75s ease;
+    opacity: 0;
+    text-decoration: none;
+}
+
+.project-inner h3 span {
+    font-weight: 600;
+}
+
+.project-inner h3 span:nth-child(2) {
+    color: var(--green);
+}
+
+.project h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--off-white);
+}
+
+.project p {
+    font-size: 0.9rem;
+    color: var(--green);
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.project p i {
+    font-size: 0.8rem;
+    margin-right: 0.25rem;
+}
+
+.project:hover .project-inner {
+    opacity: 1;
+}
+
+
+.project .divider-line {
+    width: 40%;
+    height: 2px;
+    background-color: var(--off-white);
+}
+
+
+#all-projects-button {
+    border: 2px solid var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    background-color: var(--black-grey);
+    background-image: none;
+    cursor: pointer;
+}
+
+#all-projects-button .project-inner {
+    opacity: 1;
+    background-color: transparent;
+}
+
+#all-projects-button:hover {
+    background-color: var(--green);
+}
+
+#all-projects-button p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    color: var(--off-white);
+}
+
+
+#all-projects-button p i {
+    margin-left: 0.5rem;
+    font-size: 1rem;
+}
+
+#all-projects-button a {
+    text-decoration: none;
+}
+
+.project {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#project-home-OVD-519 {
+    background-image: url("../images/projects/Single Residential/OVD 519/OVD 519 (1).jpg");
+}
+
+#project-home-nettleton {
+    background-image: url("../images/projects/Single Residential/7 Nettleton/7 Nettleton (1).jpg");
+}
+
+#project-home-brazzaville {
+    background-image: url("../images/projects/Mixed Use/Brazzaville/Brazzaville (3).jpg");
+}
+
+#project-home-glengariff {
+    background-image: url("../images/projects/Mixed Use/Glengariff/Glengariff (1).jpg");
+}
+
+#project-home-kirchpharma {
+    background-image: url("../images/projects/Commercial/Kirchpharma/Kirchpharma (2).jpg");
+}
+
+#project-home-solis {
+    background-image: url("../images/projects/Multi Residential/The Solis/The Solis (1).jpg");
+}
+
+.project-grid {
+    margin-top: 2rem;
+    display: none;
+    flex-wrap: wrap;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.project-grid.active {
+    display: grid;
+}
+
+.project-grid .project {
+    height: 35vh;
 }
 
 .project-modal {
@@ -1198,37 +1204,45 @@ footer a i {
 
 .project-images {
     width: 60%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+}
+
+.project-images-grid,
+.project-images-construction-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
 }
 
 
-.project-images div {
-    /* background-image: url("../images/projects/NETT\ \(13\).jpg");
-    background-position: center center;
-    background-size: cover; */
-    width: 49%;
-    height: 40vh;
-    margin-bottom: 1rem;
+.project-images .project-image {
+    width: 100%;
+    height: 30vh;
     cursor: pointer;
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;
     -o-transition: 0.5s;
-    overflow: hidden;
 }
 
-.project-images div:hover {
+.project-images .project-image:hover {
     opacity: 0.5;
 }
 
-.project-images img {
+.project-images .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     overflow: hidden;
+}
+
+.project-images-construction h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--green);
 }
 
 .project-image-modal {
