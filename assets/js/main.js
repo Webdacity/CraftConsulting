@@ -28,6 +28,13 @@ $(".contact-modal i").click(() => {
 });
 
 
+// Navbar
+
+$(".navbar-icon").click(() => {
+    $(".navbar-icon").toggleClass("active")
+    $(".navbar-menu").toggleClass("active")
+})
+
 // Loader
 
 const showLoader = () => {
