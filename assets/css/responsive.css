@@ -156,6 +156,14 @@
     .section-landing .content img {
         width: 70%;
     }
+
+    .landing-social.mobile {
+        display: flex;
+    }
+
+    .landing-social {
+        display: none;
+    }
 }
 
 @media (hover: none) {

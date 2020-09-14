@@ -32,76 +32,54 @@
 
 <body>
 
-
-    <!-- Nav Bar -->
-    <nav class="navbar">
-        <a href="./index.html">
-            <img src="./assets/images/logos/Logo-White.png" alt="">
-        </a>
-        <i class="material-icons" onclick="openNav()">menu</i>
-    </nav>
-
-    <!-- Navbar Content -->
-    <div class="navbar-overlay">
-        <div class="container">
-            <i class="material-icons" onclick="closeNav()">close</i>
-
-            <div class="navbar-content">
-                <img src="./assets/images/logos/Logo-White.png" alt="">
-
-                <div class="navbar-menu">
-                    <a href="./index.html#section-projects">projects</a>
-                    <a href="./index.html#section-about">About</a>
-                    <a href="./index.html#section-services">Services</a>
-                    <a href="./index.html#section-contact">Contact</a>
-                </div>
-            </div>
-
-            <div class="navbar-social">
-
-            </div>
-        </div>
-    </div>
-
-
     <!-- Landing Section -->
     <section class="section-landing">
-        <div class="video-cover"></div>
-
-        <!-- Logo-Mark -->
-        <a href="./index.html" class="logo-mark">
-            <img class="" src="./assets/images/logos/logo-mark.png" alt="Craft Consulting logo-mark">
-        </a>
+        <!-- Video -->
+        <div class="video-container">
+            <div class="video-cover"></div>
+            <video src="./assets/videos/landing.mp4" autoplay></video>
+        </div>
 
         <!-- Nav Right -->
         <nav>
             <ul>
+
                 <li>
-                    <a href="./index.html#section-projects">Projects</a>
+                    <a href="./about.html">About</a>
                 </li>
                 <li>
-                    <a href="./index.html#section-about">About</a>
+                    <a href="./projects.html">Projects</a>
                 </li>
                 <li>
-                    <a href="./index.html#section-services">Services</a>
-                </li>
-                <li>
-                    <a href="./index.html#section-contact">Contact</a>
+                    <a href="./contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
 
+
+
         <!-- Content -->
         <div class="container content">
-            <img src="./assets/images/logos/Logo-White-Full.png" alt="Craft Consulting logo-full">
+            <img src="./assets/images/logos/Logo.png" alt="Craft Consulting logo-full">
 
-            <p>
-                We practice social distancing where possible and are available for Zoom, Microsoft Teams or Google Meet virtual meetings.
-            </p>
-            <p>
-                SA Govt Coronavirus (COVID-19) portal at <br>
-                <a href="https://sacoronavirus.co.za/">sacoronavirus.co.za</a>
-            </p>
+            <div class="covid">
+                <p>
+                    We practice social distancing where possible and are available for Zoom, Microsoft Teams or Google Meet virtual meetings.
+                </p>
+                <p>Click on contact to set up a meeting.</p>
+                <p>
+                    SA Govt Coronavirus (COVID-19) portal at <br>
+                    <a href="https://sacoronavirus.co.za/">sacoronavirus.co.za</a>
+                </p>
+                <div class="landing-social mobile">
+                    <a href="https://www.facebook.com/craftconsultingengineers/" target="blank">
+                        <img src="./assets/images/icons/facebook-grey.png">
+                    </a>
+                    <a href="https://www.instagram.com/craftconsultingengineers/" target="blank">
+                        <img src="./assets/images/icons/instagram-grey.png">
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div class="landing-social">
@@ -113,370 +91,6 @@
             </a>
         </div>
     </section>
-
-
-    <!-- Projects Section -->
-    <section class="section-projects" id="section-projects">
-        <div class="container">
-
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <div class="line"></div>
-                <h1>
-                    Projects
-                </h1>
-            </div>
-
-            <div class="content">
-                <!-- 
-                <div class="project-types">
-                    <p class="active">All</p>
-                    <p>Single Residential</p>
-                    <p>Multi Residential</p>
-                    <p>Mixed Use</p>
-                    <p>Commercial</p>
-                    <p>Industrial</p>
-                </div> -->
-
-                <div class="project-grid" id="home-project-grid">
-                    <div class="project grid-col-1-2" id="project-home-brazzaville">
-                        <a class="project-inner" href="./projects.html#Brazzaville">
-                            <h3>Brazzaville</h3>
-                            <div class="divider-line"></div>
-                            <p> <i class="material-icons">room</i>
-                                Republic of the Congo</p>
-                        </a>
-                    </div>
-                    <div class="project" id="project-home-nettleton">
-                        <a class=" project-inner" href="./projects.html#7 Nettleton">
-                            <h3>7 Nettleton</h3>
-                            <div class="divider-line"></div>
-                            <p> <i class="material-icons">room</i>
-                                Clifton</p>
-                        </a>
-                    </div>
-                    <div class="project grid-row-2-3" id="project-home-glengariff">
-                        <a class=" project-inner" href="./projects.html#Glengariff">
-                            <h3>The Glengariff</h3>
-                            <div class="divider-line"></div>
-                            <p> <i class="material-icons">room</i>
-                                Sea Point</p>
-                        </a>
-                    </div>
-                    <div class="project grid-col-2-3" id="project-home-kirchpharma">
-                        <a class=" project-inner" href="./projects.html#Kirchpharma">
-                            <h3>Kirchpharma</h3>
-                            <div class="divider-line"></div>
-                            <p> <i class="material-icons">room</i>
-                                Germany</p>
-                        </a>
-                    </div>
-                    <div class="project" id="project-home-OVD-519">
-                        <a class="project-inner" href="./projects.html#OVD 519">
-                            <h3>OVD 519</h3>
-                            <div class=" divider-line"></div>
-                            <p> <i class="material-icons">room</i>
-                                Fresnaye</p>
-                        </a>
-                    </div>
-                    <div class="project" id="all-projects-button">
-                        <a class="project-inner" href="./projects.html">
-                            <p>View All Projects
-                                <i class="material-icons">search</i>
-                            </p>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="projects-extra">
-                    <p>Visit our social media pages for the latest upcoming projects.</p>
-                    <p>Download our latest profile here:</p>
-                    <a class="button" href="./assets/documents/Craft Consulting - Profile 2020.pdf" target="blank">
-                        Download Profile
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section-stats section-break">
-        <div class="container">
-
-            <div class="stats-grid">
-                <div class="stats-item">
-                    <h1>8</h1>
-                    <p>Highly Skilled & Motivated Team Members</p>
-                </div>
-                <div class="stats-item">
-                    <h1>42</h1>
-                    <p>Successfully Completed Projects</p>
-                </div>
-                <div class="stats-item">
-                    <h1>9</h1>
-                    <p>
-                        Successful project Partnerships
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="section-about" id="section-about">
-        <div class="container">
-
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <div class="line"></div>
-                <h1>
-                    ABOUT
-                </h1>
-            </div>
-
-            <div class="content">
-                <p>
-                    Craft Consulting is a Cape Town based Civil & Structural Engineering firm.<br> <br>
-                    We offer a personalised, innovative, and practical approach to our clients and strive to provide valuable input on our projects.
-                    <br> <br>
-                    Our focus is on residential, commercial & industrial type structures of any complexity and have worked closely with some of the best architects and professional teams in the field.
-                    <br> <br>
-                    We are enthusiastic, well experienced engineers with a can-do attitude. We pride ourselves in our quality of information and ensure our projects are carried out to this standard.
-                    <br><br>
-                    Registered with ECSA, SAICE & NHBRC
-                    We carry comprehensive indemnity insurance and have been claim free to date.
-                </p>
-            </div>
-
-            <!-- Section Heading -->
-            <div class="section-heading" id="section-services">
-                <div class="line"></div>
-                <h1>
-                    SERVICES
-                </h1>
-            </div>
-
-            <div class="content">
-                <h4>Full scope Structural and Civil Engineering service. </h4>
-
-                <div class="services-grid">
-                    <div>
-                        <h5>Residential</h5>
-                        <div class="heading-underline"></div>
-                        <ul>
-                            <li> <span></span> Luxury residential houses and villas</li>
-                            <li> <span></span> Multi residential buildings</li>
-                            <li> <span></span> Free stranding and cluster developments</li>
-                            <li> <span></span> Building additions and alterations</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5>Commercial</h5>
-                        <div class="heading-underline"></div>
-                        <ul>
-                            <li> <span></span> Mixed use multi storey buildings</li>
-                            <li> <span></span> Office buildings</li>
-                            <li> <span></span> Student accommodation</li>
-                            <li> <span></span> Shopping centres</li>
-                            <li> <span></span> Gatehouse & Clubhouse buildings</li>
-                            <li> <span></span> Gym facilities</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h5>Industrial</h5>
-                        <div class="heading-underline"></div>
-                        <ul>
-                            <li><span></span> Industrial steel and concrete structures</li>
-                            <li><span></span> Frame structures</li>
-                            <li><span></span> Building additions and alterations to industrial plants and facilities</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="services-grid alternate">
-                    <div>
-                        <h5>Analysis, design, detailing, drawing</h5>
-                    </div>
-                    <div>
-                        <h5>Structural investigations and report writing</h5>
-                    </div>
-                    <div>
-                        <h5>DCP testing and analysis</h5>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <section class="feedback-section section-break">
-        <div class="container">
-
-            <div class="feedback-grid">
-                <div class="feedback-item">
-                    <p>"This is just a thank you note for the magnificent 3D drawing. Much appreciated"
-                    </p>
-                    <h5>Hugo Ferreira </h5>
-                    <h6>Contracts Manager for Blackland Industries</h6>
-                    <p>May 2019 - Camps Bay</p>
-                </div>
-                <div class="feedback-item">
-                    <p>"Just a quick note to commend the documentation that you guys are putting out. It's a pleasure working off your drawings. Keep it up!"</p>
-                    <h5>Andrew Thornton </h5>
-                    <h6>Director for Aboutspace architects</h6>
-                    <p>May 2019 - Camps Bay</p>
-                </div>
-                <div class="feedback-item">
-                    <p>"Thank you very much for distributing us a beautiful drawing of the PRIME Dome" </p>
-                    <h5>Yasushi Muraki </h5>
-                    <h6>ISEE Nagoya University</h6>
-                    <p>August 2019 - Sutherland, SAAO Telescope Dome</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- Contact Section -->
-    <section class="section-contact" id="section-contact">
-        <div class="container">
-
-            <!-- Section Heading -->
-            <div class="section-heading">
-                <div class="line"></div>
-                <h1>
-                    CONTACT
-                </h1>
-            </div>
-
-            <div class="contact-grid">
-                <div class="contact-map">
-                    <iframe src="https://snazzymaps.com/embed/258803" style="border:none;"></iframe>
-                </div>
-                <div class="contact-details">
-                    <a href="https://g.page/craft-consulting-engineers?share">
-                        <i class="material-icons"> room </i>
-
-                        204 Manhattan Wharfside, <br>
-                        Esplanade Road, <br>
-                        Century City,<br>
-                        7441
-                    </a>
-                    <div class="contact-team">
-                        <h4><span>General</span> Inquiries</h4>
-                        <a href="mailto:info@craft-sa.co.za">
-                            <i class="material-icons"> mail </i>
-                            info@craft-sa.co.za
-                        </a>
-                        <a href="tel:021 180 4372">
-                            <i class="material-icons"> phone </i>
-                            021 180 4372
-                        </a>
-                        <h4><span>Paul</span> Cameron</h4>
-                        <a href="mailto:paul@craft-sa.co.za">
-                            <i class="material-icons"> mail </i>
-                            paul@craft-sa.co.za
-                        </a>
-                        <a href="tel:072 181 2935">
-                            <i class="material-icons"> phone </i>
-                            072 181 2935
-                        </a>
-                        <a href="tel:021 180 4372">
-                            <i class="material-icons"> phone </i>
-                            021 180 4372
-                        </a>
-                    </div>
-                    <button class="button" id="contact-button">
-                        Send us a Message
-                        <i class="material-icons"> send </i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-modal">
-            <div class="container">
-                <i class="material-icons">close</i>
-                <div class="contact-form">
-                    <h3>Get in Touch</h3>
-                    <form netlify>
-                        <input type="text" name="Name" placeholder="Your Name">
-                        <input type="email" name="Email" placeholder="Your Email">
-                        <textarea placeholder="Your Message" rows=5 name="Message"></textarea>
-                        <button class="button" type="submit">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="home-footer">
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div class="footer-logo">
-                    <img src="./assets/images/logos/Logo-White-Full.png" alt="Craft Consulting logo-full">
-                </div>
-
-                <div class="footer-links">
-                    <a href="./index.html#section-projects">
-                        Projects
-                    </a>
-                    <a href="./index.html#section-about">
-                        About
-                    </a>
-                    <a href="./index.html#section-services">
-                        Services
-                    </a>
-                    <a href="./index.html#section-contact">
-                        Contact
-                    </a>
-                </div>
-
-                <div class="footer-contact">
-                    <a href="tel:021 180 4372">
-                        <i class="material-icons"> phone </i>
-                        021 180 4372
-                    </a>
-                    <a href="https://g.page/craft-consulting-engineers?share">
-                        <i class="material-icons"> room </i>
-
-                        204 Manhattan Wharfside, <br>
-                        Esplanade Road, Century City, 7441
-                    </a>
-                    <a href="https://www.facebook.com/craftconsultingengineers/" target="blank">
-                        <img src="./assets/images/icons/facebook-green.png">
-                        Facebook
-                    </a>
-                    <a href="https://www.instagram.com/craftconsultingengineers/" target="blank">
-                        <img src="./assets/images/icons/instagram-green.png">
-                        Instagram
-                    </a>
-                </div>
-
-            </div>
-
-            <div class="footer-copy">
-                <p>© Copyright 2020 - Craft Consulting Engineers </p>
-                <p>Design & Development by <a href="https://www.webdacity.co.za/">Webdacity</a></p>
-            </div>
-
-
-
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button onclick="scrollToTop()" class="scroll-top-button">
-        <i class="material-icons">keyboard_arrow_up</i>
-    </button>
-
 
     <!-- Loader -->
     <div class="loader">
