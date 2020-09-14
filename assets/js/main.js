@@ -66,3 +66,14 @@ const updateProjectsGrid = (type) => {
     }
 
 }
+
+$(".dropdown-button").click(() => {
+    $(".dropdown-content").toggleClass("active");
+})
+
+$(".dropdown-content p").click(function () {
+    $(".dropdown-content").toggleClass("active");
+    let type = $(this).find("span").html();
+    $(".dropdown-button span").html(`${type} Projects`)
+    updateProjectsGrid(type);
+})

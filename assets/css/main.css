@@ -912,7 +912,7 @@ footer a i {
     padding: 6rem 0;
 }
 
-.section-projects .project-types {
+.project-types {
     list-style: none;
     display: flex;
 }
@@ -1278,6 +1278,7 @@ footer a i {
 
 .project-image-modal .image {
     width: 90%;
+    margin-left: 5%;
     height: 100%;
 }
 
@@ -1308,4 +1309,70 @@ footer a i {
 
 .image-arrow i:hover {
     color: var(--green);
+}
+
+
+.dropdown {
+    position: relative;
+    display: none;
+    width: 100%;
+    border: 2px solid var(--green);
+}
+
+.dropdown-button {
+    width: 100%;
+    background-color: transparent;
+    color: var(--off-white);
+    padding: 1rem;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    outline: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--dark-grey);
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    transition: 0.5 ease;
+    -webkit-transition: 0.5 ease;
+    -moz-transition: 0.5 ease;
+    -ms-transition: 0.5 ease;
+    -o-transition: 0.5 ease;
+}
+
+.dropdown-content p {
+    color: var(--off-white);
+    padding: 0.5rem 0;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    transition: 0.5 ease;
+    -webkit-transition: 0.5 ease;
+    -moz-transition: 0.5 ease;
+    -ms-transition: 0.5 ease;
+    -o-transition: 0.5 ease;
+}
+
+.dropdown-content p:hover {
+    color: var(--green)
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: var(--green);
 }
