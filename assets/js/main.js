@@ -31,38 +31,12 @@ $(".contact-modal i").click(() => {
 // Navbar
 
 const openNav = () => {
-    $(".navbar-overlay").fadeIn(1000);
-    $(".navbar-overlay").css("display", "flex");
-    $("html, body").addClass("no-scroll");
+
 }
 
 const closeNav = () => {
-    $(".navbar-overlay").fadeOut(1000);
-    $("html, body").removeClass("no-scroll")
+
 }
-
-$(".navbar-content a").click(() => {
-    closeNav()
-});
-
-let prevScrollPos = $(document).scrollTop();
-const homePaths = ["/index.html", "/"];
-if (homePaths.includes(window.location.pathname)) {
-    $(".navbar").css("top", "-5rem");
-}
-
-$(document).scroll(() => {
-    let currentScrollPos = $(document).scrollTop();
-    if (currentScrollPos < 250 && homePaths.includes(window.location.pathname)) {
-        $(".navbar").css("top", "-5rem")
-    } else if (prevScrollPos > currentScrollPos) {
-        $(".navbar").css("top", "0")
-    } else {
-        $(".navbar").css("top", "-5rem")
-    }
-    prevScrollPos = currentScrollPos;
-});
-
 
 // Loader
 

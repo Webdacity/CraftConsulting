@@ -1,5 +1,3 @@
-@media screen and (min-width: 1200px) {}
-
 @media screen and (max-width: 992px) {}
 
 @media screen and (max-width: 768px) {
@@ -90,9 +88,38 @@
     .section-landing .content img {
         width: 50%;
     }
+
+    .section-about {
+        text-align: center;
+        background-size: auto;
+    }
+
+    .about-grid {
+        display: block;
+    }
+
+    .about-grid .section-heading .line {
+        margin: auto;
+    }
+
+    .about-grid .right-text {
+        border-left: none;
+        padding-left: 0;
+        padding-top: 1rem;
+        margin-top: 2rem;
+        border-top: 2px solid var(--green);
+    }
+
+    .feedback-section .section-heading .line {
+        width: 35%;
+    }
 }
 
 @media screen and (max-width: 576px) {
+
+    .container {
+        padding: 0 1rem;
+    }
 
     .project-grid {
         justify-content: center;
