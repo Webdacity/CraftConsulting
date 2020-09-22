@@ -37,7 +37,7 @@
     <!-- Nav Bar -->
     <nav class="navbar">
         <a href="./index.html">
-            <img src="./assets/images/logos/Logo-Navbar.png" alt="Craft Navbar Logo">
+            <img src="./assets/images/logos/Logo-Small.png" alt="Craft Navbar Logo">
         </a>
         <i class="material-icons navbar-icon">menu</i>
 
@@ -97,12 +97,12 @@
                 </div>
 
                 <div class="home-project-grid" id="home-project-grid">
-                    <div class="project grid-col-1-2" id="project-home-brazzaville">
-                        <a class="project-inner" href="./projects.html#Brazzaville">
-                            <h3>Brazzaville</h3>
+                    <div class="project grid-col-1-2" id="project-home-kirschpharma">
+                        <a class="project-inner" href="./projects.html#Kirschpharma">
+                            <h3>Kirschpharma</h3>
                             <div class="divider-line"></div>
                             <p> <i class="material-icons">room</i>
-                                Republic of the Congo</p>
+                                Germany</p>
                         </a>
                     </div>
                     <div class="project" id="project-home-nettleton">
@@ -114,24 +114,24 @@
                         </a>
                     </div>
                     <div class="project grid-row-2-3" id="project-home-glengariff">
-                        <a class=" project-inner" href="./projects.html#Glengariff">
+                        <a class=" project-inner" href="./projects.html#The Glengariff">
                             <h3>The Glengariff</h3>
                             <div class="divider-line"></div>
                             <p> <i class="material-icons">room</i>
                                 Sea Point</p>
                         </a>
                     </div>
-                    <div class="project grid-col-2-3" id="project-home-kirchpharma">
-                        <a class=" project-inner" href="./projects.html#Kirchpharma">
-                            <h3>Kirchpharma</h3>
+                    <div class="project grid-col-2-3" id="project-home-the-marly">
+                        <a class=" project-inner" href="./projects.html#The Marly Hotel">
+                            <h3>The Marly Hotel</h3>
                             <div class="divider-line"></div>
                             <p> <i class="material-icons">room</i>
-                                Germany</p>
+                                Camps Bay</p>
                         </a>
                     </div>
-                    <div class="project" id="project-home-OVD-519">
-                        <a class="project-inner" href="./projects.html#OVD 519">
-                            <h3>OVD 519</h3>
+                    <div class="project" id="project-home-216-OVD">
+                        <a class="project-inner" href="./projects.html#216 OVD">
+                            <h3>216 OVD</h3>
                             <div class=" divider-line"></div>
                             <p> <i class="material-icons">room</i>
                                 Fresnaye</p>
@@ -169,7 +169,7 @@
                 </div>
 
                 <div class="projects-extra">
-                    <p>Visit our social media pages for the latest upcoming projects:</p>
+                    <p>Visit our social media pages for the latest and upcoming projects:</p>
                     <div class="projects-social">
                         <a href="https://www.facebook.com/craftconsultingengineers/" target="blank">
                             <img src="./assets/images/icons/facebook-grey.png" alt="facebook logo">
@@ -193,7 +193,12 @@
 
     <!-- Project Modal -->
     <div class="project-modal">
-        <i class="material-icons close-project-modal" onclick="closeProjectModal()">close</i>
+        <nav class="project-modal__navbar">
+            <a href="./index.html" class="project-modal__logo">
+                <img src="./assets/images/logos/Logo-Small.png" alt="Craft Navbar Logo">
+            </a>
+            <i class="material-icons close-project-modal" onclick="closeProjectModal()">close</i>
+        </nav>
         <div class="container">
             <div class="project-modal-grid">
 
@@ -237,18 +242,18 @@
     </div>
 
     <!-- Project Image Modal -->
-    <div class="project-image-modal">
+    <div class="project-image-modal" data-project-name="">
         <div class="content">
             <i class="material-icons close-project-image-modal" onclick="closeProjectImageModal()">close</i>
-            <!-- <div class="image-arrow" id="image-left">
+            <div class="image-arrow" id="image-left" onclick="prevProjectImageModal()">
                 <i class="material-icons">keyboard_arrow_left</i>
-            </div> -->
+            </div>
             <div class="image">
                 <img alt="project modal image">
             </div>
-            <!-- <div class="image-arrow" id="image-right">
+            <div class="image-arrow" id="image-right" onclick="nextProjectImageModal()">
                 <i class="material-icons">keyboard_arrow_right</i>
-            </div> -->
+            </div>
         </div>
     </div>
 
@@ -258,7 +263,7 @@
             <div class="footer-grid">
 
                 <div class="footer-logo">
-                    <img src="./assets/images/logos/Logo-Footer.png" alt="Craft Consulting Footer Logo">
+                    <img src="./assets/images/logos/Logo-Small.png" alt="Craft Consulting Footer Logo">
                 </div>
 
                 <div class="footer-links">

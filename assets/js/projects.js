@@ -2,14 +2,16 @@
 // PROJECTS
 
 // Load All Projects
+let globalProjects = {};
 
 const loadAllProjects = () => {
     axios({
-            method: "get",
-            url: "../../assets/js/projects.json"
-        })
+        method: "get",
+        url: "../../assets/js/projects.json"
+    })
         .then(result => {
             projects = result.data;
+            globalProjects = projects;
 
             projects.forEach(project => {
                 let projectGrid = project.type.toLowerCase().replace(" ", "-") + "-grid";
@@ -19,6 +21,7 @@ const loadAllProjects = () => {
                     <div class="project" style="background-image: url('./assets/images/projects/${project.type}/${project.name}/${project.name} (1).jpg');">
                         <a class="project-inner" href="./projects.html#${project.name}">
                             <h3>${project.name}</h3>
+                            ${project.underConstruction ? "<h5> - Under Construction - </h5>" : ""}
                             <div class="divider-line"></div>
                             <p> <i class="material-icons">room</i>
                                 ${projectLocation}</p>
@@ -49,9 +52,9 @@ const loadProject = () => {
     $("html, body").addClass("no-scroll");
 
     axios({
-            method: "get",
-            url: "../../assets/js/projects.json"
-        })
+        method: "get",
+        url: "../../assets/js/projects.json"
+    })
         .then(result => {
             projects = result.data;
 
@@ -70,6 +73,7 @@ const loadProject = () => {
             $(".project-type span").html(project.type)
             $(".project-date span").html(project.date)
             $(".project-location span").html(project.location);
+            $(".project-image-modal").attr("data-project-name", project.name)
 
             // Insert Logos
             $(".project-logos").empty();
@@ -109,6 +113,7 @@ const loadProject = () => {
                 $(".project-modal .project-images-construction").hide()
             }
 
+
         })
         .catch(err => {
             console.log(err)
@@ -147,3 +152,45 @@ $(document).on("click", ".project-images .project-image img", function () {
 const closeProjectImageModal = () => {
     $(".project-image-modal").removeClass("active");
 }
+
+// Project Modal Arrows
+
+const getProjectImageModalDetails = () => {
+    const currentProjectName = $(".project-image-modal").attr("data-project-name");
+    const currentProject = globalProjects.find(project => project.name === currentProjectName);
+    let currentImageURL = $(".project-image-modal img").attr("src");
+    const currentImageCount = parseInt(currentImageURL.substring(currentImageURL.indexOf("(") + 1, currentImageURL.indexOf(")")));
+
+    let construction = false;
+    let constructionString = "";
+    if (currentImageURL.includes("Construction")) {
+        construction = !construction;
+    }
+
+    if (construction) {
+        constructionString = "/Construction/"
+    }
+
+    return [currentProjectName, currentProject, currentImageCount, constructionString]
+}
+
+const nextProjectImageModal = () => {
+    const [currentProjectName, currentProject, currentImageCount, constructionString] = getProjectImageModalDetails();
+
+    if (currentImageCount < currentProject.images) {
+        $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount + 1}).jpg`);
+    } else {
+        $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (1).jpg`);
+    }
+}
+
+const prevProjectImageModal = () => {
+    const [currentProjectName, currentProject, currentImageCount, constructionString] = getProjectImageModalDetails();
+
+    if (currentImageCount === 1) {
+        $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentProject.images}).jpg`);
+    } else {
+        $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount - 1}).jpg`);
+    }
+}
+

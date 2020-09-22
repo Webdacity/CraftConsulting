@@ -68,11 +68,14 @@ section {
     align-items: center;
     padding: 0.5rem 1rem;
     box-sizing: border-box;
+    position: absolute;
 }
 
 .navbar img {
     display: block;
-    height: 3rem
+    height: 3.25rem;
+    padding-left: 2rem;
+    margin-top: 1rem;
 }
 
 .navbar-icon {
@@ -96,7 +99,7 @@ section {
 }
 
 .navbar-menu {
-    background-color: var(--dark-grey);
+    background-color: transparent;
     position: absolute;
     top: 3rem;
     right: 0;
@@ -344,7 +347,7 @@ footer a i {
 }
 
 .footer-social a img {
-    width: 1rem;
+    width: 1.1rem;
     margin: 0 0.5rem;
 }
 
@@ -491,9 +494,9 @@ footer a i {
 }
 
 .section-landing img {
-    width: 35%;
+    width: 45%;
     position: relative;
-    top: 30%;
+    top: 10%;
 }
 
 .section-landing .covid {
@@ -512,17 +515,15 @@ footer a i {
 
 .section-landing .covid p {
     color: white;
+    margin: 0;
+    margin-bottom: 0.5rem;
 }
 
 .section-landing .covid p:nth-child(2) {
-    font-size: 1.1rem;
-}
-
-.section-landing .covid p:nth-child(3) {
     color: red;
 }
 
-.section-landing .covid p:nth-child(3) a {
+.section-landing .covid p:nth-child(2) a {
     color: red;
 }
 
@@ -546,7 +547,7 @@ footer a i {
 }
 
 .landing-social a img {
-    width: 1.4rem;
+    width: 1.5rem;
     margin: 0.25rem 0;
 }
 
@@ -597,12 +598,12 @@ footer a i {
 /* About Section */
 
 .section-about {
-    background-image: url("../images/backgrounds/services-section.png");
-    background-size: 100% auto;
-    background-position: right top;
+    background-image: url("../images/backgrounds/landing-dark.jpg");
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 6rem 0;
+    padding: 10rem 0 6rem 0;
 }
 
 
@@ -637,6 +638,7 @@ footer a i {
 .section-about .content p {
     font-weight: 300;
     font-size: 0.9rem;
+    margin: 0.75rem 0;
 }
 
 .section-about .content h4 {
@@ -684,7 +686,7 @@ footer a i {
     text-align: center;
     text-transform: uppercase;
     font-size: 1rem;
-    margin: 0;
+    margin: 0.75rem 0;
 }
 
 .services-grid .heading-underline {
@@ -692,8 +694,6 @@ footer a i {
     height: 1px;
     background-color: var(--green);
     margin: auto;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
 }
 
 .services-grid ul {
@@ -705,6 +705,9 @@ footer a i {
 
 .services-grid ul li {
     font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0.75rem 0;
+
 }
 
 .services-grid ul li span {
@@ -714,6 +717,46 @@ footer a i {
     background-color: var(--green);
     display: inline-block;
     vertical-align: middle;
+}
+
+
+/* Service Logos */
+
+.service-logos-grid {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.service-logos-grid>div {
+    width: 30%;
+}
+
+.service-logos__heading {
+    text-align: center;
+}
+
+.service-logos__heading h2 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--green);
+    display: inline-block;
+}
+
+.service-logos__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.service-logos__container img {
+    width: 8rem;
+}
+
+.service-logos__container.register-logos img {
+    width: 7rem;
 }
 
 
@@ -777,10 +820,11 @@ footer a i {
 /* COntact Section */
 
 .section-contact {
-    background-image: url("../images/backgrounds/contact-section.png");
-    background-size: contain;
+    background-image: url("../images/backgrounds/landing-dark.jpg");
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
-    background-position: 85% 50%;
+    background-attachment: fixed;
     padding: 4rem 0 6rem 0;
     min-height: 80vh;
     box-sizing: border-box;
@@ -924,6 +968,11 @@ footer a i {
 
 .section-projects {
     padding: 6rem 0;
+    background-image: url("../images/backgrounds/landing-dark.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .project-types {
@@ -1025,17 +1074,22 @@ footer a i {
 .project h3 {
     font-weight: 500;
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
     color: var(--off-white);
+    margin-bottom: 0;
+}
+
+.project h5 {
+    color: var(--green);
+    font-weight: 500;
+    margin: 0.25rem 0
 }
 
 .project p {
     font-size: 0.9rem;
     color: var(--green);
-    margin-top: 0.5rem;
     display: flex;
     align-items: center;
-
+    margin: 0;
 }
 
 .project p i {
@@ -1052,6 +1106,7 @@ footer a i {
     width: 40%;
     height: 2px;
     background-color: var(--off-white);
+    margin: 0.5rem 0;
 }
 
 
@@ -1102,24 +1157,25 @@ footer a i {
     background-position: center center;
 }
 
-#project-home-OVD-519 {
-    background-image: url("../images/projects/Single Residential/OVD 519/OVD 519 (1).jpg");
+#project-home-216-OVD {
+    background-image: url("../images/projects/Single Residential/216 OVD/216 OVD (1).jpg");
 }
 
 #project-home-nettleton {
     background-image: url("../images/projects/Single Residential/7 Nettleton/7 Nettleton (1).jpg");
 }
 
-#project-home-brazzaville {
-    background-image: url("../images/projects/Mixed Use/Brazzaville/Brazzaville (3).jpg");
+#project-home-the-marly {
+    background-image: url("../images/projects/Commercial/The Marly Hotel/The\ Marly\ Hotel\ \(1\).jpg");
 }
 
 #project-home-glengariff {
-    background-image: url("../images/projects/Mixed Use/Glengariff/Glengariff (1).jpg");
+    background-image: url("../images/projects/Mixed Use/The Glengariff/The\ Glengariff\ \(1\).jpg");
 }
 
-#project-home-kirchpharma {
-    background-image: url("../images/projects/Commercial/Kirchpharma/Kirchpharma (2).jpg");
+#project-home-kirschpharma {
+    background-image: url("../images/projects/Commercial/Kirschpharma/Kirschpharma\ \(4\).jpg");
+    background-size: 105% auto;
 }
 
 #project-home-solis {
@@ -1148,23 +1204,46 @@ footer a i {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background-color: var(--black-grey);
+    background-image: url("../images/backgrounds/landing-dark.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     position: fixed;
     top: 0;
     left: 0;
     overflow-y: scroll;
-    padding: 5rem 0;
     display: none;
 }
 
 .project-modal-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 4rem;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 8rem 0 3rem 0;
 }
 
-.project-details {
-    width: 35%;
+.project-modal__navbar {
+    background-color: transparent;
+    width: 100%;
+    height: 4rem;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    position: absolute;
+}
+
+.project-modal__logo img {
+    position: absolute;
+    display: block;
+    height: 3.25rem;
+    padding-left: 2rem;
+    top: 1rem;
 }
 
 .project-name {
@@ -1202,7 +1281,7 @@ footer a i {
 
 
 .project-logos img {
-    width: 50%;
+    width: 9rem;
     display: block;
     margin: 1rem 0;
 }
@@ -1227,14 +1306,10 @@ footer a i {
     color: var(--green);
 }
 
-.project-images {
-    width: 60%;
-}
-
 .project-images-grid,
 .project-images-construction-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -1258,6 +1333,7 @@ footer a i {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top;
     overflow: hidden;
 }
 
