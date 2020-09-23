@@ -18,7 +18,8 @@ const loadAllProjects = () => {
                 let projectLocation = project.location;
                 projectLocation = projectLocation.substring(projectLocation.indexOf(", ") + 2);
                 $(`#${projectGrid}`).append(`
-                    <div class="project" style="background-image: url('./assets/images/projects/${project.type}/${project.name}/${project.name} (1).jpg');">
+                    <div class="project">
+                    <img class="project-image" src="/assets/images/projects/${project.type}/${project.name}/${project.name} (1).jpg" alt="${project.name}">
                         <a class="project-inner" href="./projects.html#${project.name}">
                             <h3>${project.name}</h3>
                             ${project.underConstruction ? "<h5> - Under Construction - </h5>" : ""}
@@ -34,6 +35,7 @@ const loadAllProjects = () => {
             console.log(err)
         })
 }
+
 
 loadAllProjects();
 

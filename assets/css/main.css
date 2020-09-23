@@ -1061,6 +1061,9 @@ footer a i {
     -o-transition: 0.75s ease;
     opacity: 0;
     text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .project-inner h3 span {
@@ -1155,6 +1158,15 @@ footer a i {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    position: relative;
+}
+
+.project .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    overflow: hidden;
 }
 
 #project-home-216-OVD {
@@ -1195,6 +1207,10 @@ footer a i {
 
 .project-grid .project {
     height: 35vh;
+}
+
+.project-grid.portrait-grid .project {
+    height: 50vh;
 }
 
 .project-modal {
