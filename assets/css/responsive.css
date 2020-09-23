@@ -5,6 +5,12 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .project-grid .project {
+        height: 30vh;
+        max-height: 20rem;
+    }
+
+
 }
 
 @media screen and (max-width: 991px) {

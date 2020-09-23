@@ -1167,11 +1167,11 @@ footer a i {
 }
 
 #project-home-216-OVD {
-    background-image: url("../images/projects/Single Residential/216 OVD/216 OVD (1).jpg");
+    background-image: url("../images/projects/Single Residential/216 OVD/216-OVD-(T).jpg");
 }
 
 #project-home-nettleton {
-    background-image: url("../images/projects/Single Residential/7 Nettleton/7 Nettleton (T).jpg");
+    background-image: url("../images/projects/Single Residential/7 Nettleton/7-Nettleton-(T).jpg");
 }
 
 #project-home-the-marly {
@@ -1187,7 +1187,7 @@ footer a i {
 }
 
 #project-home-solis {
-    background-image: url("../images/projects/Multi Residential/The Solis/The Solis (1).jpg");
+    background-image: url("../images/projects/Multi Residential/The Solis/The-Solis-(T).jpg");
 }
 
 .project-grid {
@@ -1203,7 +1203,7 @@ footer a i {
 }
 
 .project-grid .project {
-    height: 35vh;
+    height: 40vh;
 }
 
 .project-grid.portrait-grid .project {
@@ -1334,6 +1334,7 @@ footer a i {
 .project-images .project-image {
     width: 100%;
     height: 30vh;
+    max-height: 15rem;
     cursor: pointer;
     transition: 0.5s;
     -webkit-transition: 0.5s;
