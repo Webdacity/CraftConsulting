@@ -1208,6 +1208,7 @@ footer a i {
 
 .project-grid.portrait-grid .project {
     height: 50vh;
+    background-position: center top;
 }
 
 .project-modal {
