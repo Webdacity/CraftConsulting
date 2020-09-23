@@ -44,9 +44,10 @@ loadAllProjects();
 let currentHash = window.location.hash;
 
 const closeProjectModal = () => {
-    $(".project-modal").fadeOut(1000)
+    $(".project-modal").fadeOut(500);
+    $(".project-modal .project-images-grid").empty();
     $("html, body").removeClass("no-scroll");
-    location.hash = ""
+    location.hash = "";
 }
 
 const loadProject = () => {
