@@ -18,6 +18,7 @@
 /* GENERAL */
 html {
     overflow-x: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
