@@ -30,13 +30,17 @@
         height: 35vh;
     }
 
-    .project-modal-grid {
+    /* .project-modal-grid {
         display: grid;
         grid-template-columns: 1fr;
         column-gap: 4rem;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 8rem 0 3rem 0;
+    } */
+
+    .project-images-grid {
+        grid-template-columns: 1fr;
     }
 
     .grid-col-1-2,
@@ -179,8 +183,12 @@
         padding: 0 1rem;
     }
 
+    .project-modal-grid {
+        grid-template-columns: 1fr;
+    }
+
     .project-images .project-image {
-        height: 20vh;
+        height: 25vh;
     }
 
     .project-grid,

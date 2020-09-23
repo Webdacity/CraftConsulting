@@ -80,7 +80,7 @@ const loadProject = () => {
             $(".project-name").html(project.name)
             $(".project-type span").html(project.type)
             $(".project-date span").html(project.date)
-            $(".project-location span").html(project.location);
+            $(".project-location span").html(project.location.replace(", ", "<br>"));
             $(".project-image-modal").attr("data-project-name", project.name)
 
             // Insert Logos
