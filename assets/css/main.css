@@ -1269,6 +1269,11 @@ footer a i {
     padding-left: 1rem;
 }
 
+.project-under-construction {
+    color: var(--green);
+    font-weight: 500;
+}
+
 .project-details p {
     font-size: 0.9rem;
     margin-left: 0.5rem;
