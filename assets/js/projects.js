@@ -46,6 +46,7 @@ let currentHash = window.location.hash;
 const closeProjectModal = () => {
     $(".project-modal").fadeOut(500);
     $(".project-modal .project-images-grid").empty();
+    $(".project-modal .project-images-construction-grid").empty();
     $("html, body").removeClass("no-scroll");
     location.hash = "";
 }
