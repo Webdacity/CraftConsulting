@@ -43,7 +43,7 @@
         "association": ["SOATA", "Moroff&Kuhne"],
         "type": "Single Residential",
         "images": 1,
-        "construction": 25
+        "construction": 24
     },
     {
         "name": "111 OVD",
@@ -52,7 +52,7 @@
         "association": ["BBB-Architects", "S&T-Consulting"],
         "type": "Single Residential",
         "images": 2,
-        "construction": 22
+        "construction": 12
 
     },
     {
@@ -136,7 +136,7 @@
         "association": ["IDC-Architects", "S&T-Consulting"],
         "type": "Mixed Use",
         "images": 1,
-        "construction": 11
+        "construction": 12
     },
     {
         "name": "Kirschpharma",
@@ -154,7 +154,7 @@
         "association": ["AboutSpace", "S&T-Consulting"],
         "type": "Commercial",
         "images": 2,
-        "construction": 38
+        "construction": 19
     },
     {
         "name": "SAAO Prime Telescope Dome",
@@ -172,7 +172,7 @@
         "association": ["VernonViljoen", "S&T-Consulting"],
         "type": "Commercial",
         "images": 3,
-        "construction": 43
+        "construction": 21
     },
     {
         "name": "ARB Electrical Warehouse",
@@ -205,7 +205,7 @@
         "date": "2017",
         "association": ["Moroff&Kuhne"],
         "type": "Industrial",
-        "images": 4
+        "images": 3
     },
     {
         "name": "General Industrial",

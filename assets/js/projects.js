@@ -17,7 +17,7 @@ const loadAllProjects = () => {
                 let projectGrid = project.type.toLowerCase().replace(" ", "-") + "-grid";
                 let projectLocation = project.location;
                 projectLocation = projectLocation.substring(projectLocation.indexOf(", ") + 2);
-                let imageName = project.name.replace(/ /g, "-")
+                let imageName = project.name.replace(/ /g, "-");
                 $(`#${projectGrid}`).append(`
                     <div class="project">
                     <img class="project-image" src="/assets/images/projects/${project.type}/${project.name}/${imageName}-(T).jpg" alt="${project.name}">
@@ -82,7 +82,9 @@ const loadProject = () => {
             $(".project-type span").html(project.type)
             $(".project-date span").html(project.date)
             $(".project-location span").html(project.location.replace(", ", "<br>"));
-            $(".project-image-modal").attr("data-project-name", project.name)
+            $(".project-image-modal").attr("data-project-name", project.name);
+
+            $(".project-under-construction").html(`${project.underConstruction ? "- Under Construction -" : ""}`)
 
             // Insert Logos
             $(".project-logos").empty();
