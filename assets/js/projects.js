@@ -31,6 +31,7 @@ const loadAllProjects = () => {
                     </div>
                 `)
             });
+            hideLoader()
 
         })
         .catch(err => {
@@ -267,15 +268,15 @@ const nextProjectImageModal = () => {
 
     if (constructionString !== "") {
         if (currentImageCount < currentProject.construction) {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount + 1}).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount + 1}).jpg`);
         } else {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (1).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (1).jpg`);
         }
     } else {
         if (currentImageCount < currentProject.images) {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount + 1}).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount + 1}).jpg`);
         } else {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (1).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (1).jpg`);
         }
     }
 }
@@ -285,15 +286,15 @@ const prevProjectImageModal = () => {
 
     if (constructionString !== "") {
         if (currentImageCount < currentProject.construction) {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount + 1}).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount + 1}).jpg`);
         } else {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (1).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (1).jpg`);
         }
     } else {
         if (currentImageCount === 1) {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentProject.images}).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentProject.images}).jpg`);
         } else {
-            $(".project-image-modal img").attr("src", `./assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount - 1}).jpg`);
+            $(".project-image-modal img").attr("src", `/assets/images/projects/${currentProject.type}/${currentProject.name}/${constructionString}${currentProject.name} (${currentImageCount - 1}).jpg`);
         }
     }
 }
