@@ -153,7 +153,6 @@ $(window).on("hashchange", () => {
 
 $(document).on("click", ".project-images .project-image img", function () {
     let imageUrl = $(this).attr("src")
-    console.log(imageUrl)
     $(".project-image-modal").addClass("active");
 
     // Insert Image
@@ -220,4 +219,36 @@ const prevProjectImageModal = () => {
         }
     }
 }
+
+
+// Arrow keys / Swipe
+$(document).keydown(function (e) {
+
+    if (e.which == 37) { //Left
+        if ($(".project-image-modal").hasClass("active")) {
+            prevProjectImageModal()
+        }
+    }
+
+    if (e.which == 39) { //Right
+        if ($(".project-image-modal").hasClass("active")) {
+            nextProjectImageModal()
+        }
+    }
+});
+
+var myElement = document.getElementById("project-modal-image")
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// listen to events...
+mc.on("swiperight", function (ev) {
+    prevProjectImageModal()
+});
+
+mc.on("swipeleft", function (ev) {
+    nextProjectImageModal()
+});
 
