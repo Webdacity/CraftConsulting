@@ -118,7 +118,7 @@
         "association": ["SOATA", "Moroff&Kuhne"],
         "type": "Mixed Use",
         "images": 5,
-        "construction": 31
+        "construction": 29
     },
     {
         "name": "The Glengariff",
@@ -127,7 +127,7 @@
         "association": ["BBB-Architects", "S&T-Consulting"],
         "type": "Mixed Use",
         "images": 1,
-        "construction": 10
+        "construction": 8
     },
     {
         "name": "339 on Main",
@@ -197,7 +197,7 @@
         "date": "2017",
         "association": ["Moroff&Kuhne"],
         "type": "Industrial",
-        "images": 14
+        "images": 12
     },
     {
         "name": "Waste Yard",
