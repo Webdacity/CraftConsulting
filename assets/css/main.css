@@ -750,6 +750,7 @@ footer a i {
 
 .service-logos__container img {
     width: 8rem;
+    height: auto;
 }
 
 .service-logos__container.register-logos img {

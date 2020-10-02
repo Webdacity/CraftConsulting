@@ -57,6 +57,7 @@ const closeProjectModal = () => {
 }
 
 const loadProject = () => {
+    showLoader()
     $(".project-modal").fadeIn(1000);
     $("html, body").addClass("no-scroll");
 
@@ -95,6 +96,8 @@ const loadProject = () => {
                     `
                 )
             })
+
+            hideLoader()
 
             // Insert Project Images
             $(".project-modal .project-images-grid").empty();
