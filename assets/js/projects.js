@@ -42,7 +42,8 @@ const loadAllProjects = () => {
 
 window.onload = (event) => {
     loadAllProjects();
-    checkCategory()
+    checkCategory();
+    updateDropdown()
 };
 
 // Project Categories
@@ -66,6 +67,18 @@ const checkCategory = () => {
     }
 }
 
+const titleCase = (str) => {
+    var splitStr = str.toLowerCase().split(' ');
+    for (var i = 0; i < splitStr.length; i++) {
+        // You do not need to check if i is larger than splitStr length, as your for does that for you
+        // Assign it back to the array
+        splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    // Directly return the joined string
+    return splitStr.join(' ');
+}
+
+
 $(".project-types p").click(function () {
     $(".project-types p").removeClass("active")
     $(this).addClass("active");
@@ -87,19 +100,32 @@ const updateProjectsGrid = (type) => {
         $(".home-project-grid").fadeOut();
         $(`#${projectType}-grid`).fadeIn()
         $(`#${projectType}-grid`).css("display", "grid");
+        $(".project-types p").removeClass("active");
+        $(`#type-${projectType}`).toggleClass("active");
     }
+
+    console.log(projectType)
 }
+
 
 $(".dropdown-button").click(() => {
     $(".dropdown-content").toggleClass("active");
 })
 
 $(".dropdown-content p").click(function () {
+    window.location.hash = $(this).find("span").html();
     $(".dropdown-content").toggleClass("active");
     let type = $(this).find("span").html();
     $(".dropdown-button span").html(`${type} Projects`)
     updateProjectsGrid(type);
-})
+});
+
+const updateDropdown = () => {
+    let hash = window.location.hash;
+    projectType = hash.replace(/%20/g, " ");
+    projectType = projectType.replace("#", "");
+    $(".dropdown-button span").html(`${projectType} Projects`)
+}
 
 
 
