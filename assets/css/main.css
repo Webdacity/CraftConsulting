@@ -1234,7 +1234,6 @@ footer a i {
 }
 
 .project-modal {
-    z-index: 25;
     min-height: 100%;
     width: 100%;
     height: 100%;
@@ -1248,7 +1247,6 @@ footer a i {
     top: 0;
     left: 0;
     overflow-y: scroll;
-    display: none;
 }
 
 .project-modal-grid {

@@ -21,7 +21,7 @@ const loadAllProjects = () => {
                 $(`#${projectGrid}`).append(`
                     <div class="project">
                     <img class="project-image" src="/assets/images/projects/${project.type}/${project.name}/${imageName}-(T).jpg" alt="${project.name}">
-                        <a class="project-inner" href="./projects.html#${project.name}">
+                        <a class="project-inner" href="/projects/index.html#${project.name}">
                             <h3>${project.name}</h3>
                             ${project.underConstruction ? "<h5> - Under Construction - </h5>" : ""}
                             <div class="divider-line"></div>
@@ -42,7 +42,65 @@ const loadAllProjects = () => {
 window.onload = (event) => {
     hideLoader()
     loadAllProjects();
+    checkCategory()
 };
+
+// Project Categories
+// Category hash Change
+$(".project-types p").click(function () {
+    if ($(this).html() !== "All") {
+        window.location.hash = $(this).html();
+    } else {
+        window.location.hash = ""
+    }
+})
+
+const checkCategory = () => {
+    let hash = window.location.hash
+    if (hash !== "") {
+        updateProjectsGrid(hash);
+        console.log(hash)
+
+    } else {
+        updateProjectsGrid("all")
+    }
+}
+
+$(".project-types p").click(function () {
+    $(".project-types p").removeClass("active")
+    $(this).addClass("active");
+    updateProjectsGrid($(this).html());
+});
+
+const updateProjectsGrid = (type) => {
+    let projectType = type.toLowerCase();
+    projectType = projectType.replace(" ", "-");
+    projectType = projectType.replace(/%20/g, "-");
+    projectType = projectType.replace("#", "");
+
+    if (projectType == "all") {
+        $(".project-grid").fadeOut();
+        $(".project-grid").removeClass("active");
+        $(".home-project-grid").fadeIn()
+    } else {
+        $(`.project-grid`).css("display", "none");
+        $(".home-project-grid").fadeOut();
+        $(`#${projectType}-grid`).fadeIn()
+        $(`#${projectType}-grid`).css("display", "grid");
+    }
+}
+
+$(".dropdown-button").click(() => {
+    $(".dropdown-content").toggleClass("active");
+})
+
+$(".dropdown-content p").click(function () {
+    $(".dropdown-content").toggleClass("active");
+    let type = $(this).find("span").html();
+    $(".dropdown-button span").html(`${type} Projects`)
+    updateProjectsGrid(type);
+})
+
 
 
 // Project Modal
@@ -94,7 +152,7 @@ const loadProject = () => {
             project.association.forEach(image => {
                 $(".project-logos").append(
                     `
-                    <img src="./assets/images/project-logos/${image}.png" alt="${image}" title="${image}">
+                    <img src="../assets/images/project-logos/${image}.png" alt="${image}" title="${image}">
                     `
                 )
             })
@@ -106,7 +164,7 @@ const loadProject = () => {
             for (let i = 1; i <= project.images; i++) {
                 $(".project-modal .project-images-grid").append(`
                 <div class="project-image">
-                <img src='./assets/images/projects/${project.type}/${project.name}/${project.name} (${i}).jpg'>  
+                <img src='../assets/images/projects/${project.type}/${project.name}/${project.name} (${i}).jpg'>  
                 </div>
                 `)
             }
@@ -119,7 +177,7 @@ const loadProject = () => {
                 for (let i = 1; i <= project.construction; i++) {
                     $(".project-modal .project-images-construction-grid").append(`
                     <div class="project-image">
-                    <img src='./assets/images/projects/${project.type}/${project.name}/Construction/${project.name} (${i}).jpg'>  
+                    <img src='../assets/images/projects/${project.type}/${project.name}/Construction/${project.name} (${i}).jpg'>  
                     </div>
                     `)
                 }
@@ -135,22 +193,40 @@ const loadProject = () => {
         })
 }
 
-if (currentHash !== "") {
-    console.log(true)
-    loadProject()
-}
-
-$(document).on("click", ".project-grid .project-inner", () => {
+if (window.location.pathname.includes("/projects/index.html")) {
     loadProject();
-})
 
+    // Arrow keys / Swipe
+    $(document).keydown(function (e) {
 
-$(window).on("hashchange", () => {
-    currentHash = window.location.hash;
-    if (currentHash !== "") {
-        loadProject()
-    }
-})
+        if (e.which == 37) { //Left
+            if ($(".project-image-modal").hasClass("active")) {
+                prevProjectImageModal()
+            }
+        }
+
+        if (e.which == 39) { //Right
+            if ($(".project-image-modal").hasClass("active")) {
+                nextProjectImageModal()
+            }
+        }
+    });
+
+    var myElement = document.getElementById("project-modal-image")
+
+    // create a simple instance
+    // by default, it only adds horizontal recognizers
+    var mc = new Hammer(myElement);
+
+    // listen to events...
+    mc.on("swiperight", function (ev) {
+        prevProjectImageModal()
+    });
+
+    mc.on("swipeleft", function (ev) {
+        nextProjectImageModal()
+    });
+}
 
 
 // Project Image Modal
@@ -225,34 +301,5 @@ const prevProjectImageModal = () => {
 }
 
 
-// Arrow keys / Swipe
-$(document).keydown(function (e) {
 
-    if (e.which == 37) { //Left
-        if ($(".project-image-modal").hasClass("active")) {
-            prevProjectImageModal()
-        }
-    }
-
-    if (e.which == 39) { //Right
-        if ($(".project-image-modal").hasClass("active")) {
-            nextProjectImageModal()
-        }
-    }
-});
-
-var myElement = document.getElementById("project-modal-image")
-
-// create a simple instance
-// by default, it only adds horizontal recognizers
-var mc = new Hammer(myElement);
-
-// listen to events...
-mc.on("swiperight", function (ev) {
-    prevProjectImageModal()
-});
-
-mc.on("swipeleft", function (ev) {
-    nextProjectImageModal()
-});
 

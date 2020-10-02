@@ -51,37 +51,3 @@ $(document).ready(function () {
 
 
 // Projects
-
-$(".project-types p").click(function () {
-    $(".project-types p").removeClass("active")
-    $(this).addClass("active");
-    updateProjectsGrid($(this).html());
-});
-
-const updateProjectsGrid = (type) => {
-    let projectType = type.toLowerCase();
-    projectType = projectType.replace(" ", "-");
-
-    if (projectType == "all") {
-        $(".project-grid").fadeOut();
-        $(".project-grid").removeClass("active");
-        $(".home-project-grid").fadeIn()
-    } else {
-        $(`.project-grid`).css("display", "none");
-        $(".home-project-grid").fadeOut();
-        $(`#${projectType}-grid`).fadeIn()
-        $(`#${projectType}-grid`).css("display", "grid");
-    }
-
-}
-
-$(".dropdown-button").click(() => {
-    $(".dropdown-content").toggleClass("active");
-})
-
-$(".dropdown-content p").click(function () {
-    $(".dropdown-content").toggleClass("active");
-    let type = $(this).find("span").html();
-    $(".dropdown-button span").html(`${type} Projects`)
-    updateProjectsGrid(type);
-})
