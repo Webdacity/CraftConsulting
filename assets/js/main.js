@@ -45,9 +45,7 @@ const hideLoader = () => {
     $(".loader").fadeOut(1000)
 }
 
-$(document).ready(function () {
+
+window.onload = (event) => {
     hideLoader()
-});
-
-
-// Projects
+};
