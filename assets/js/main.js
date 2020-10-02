@@ -46,6 +46,8 @@ const hideLoader = () => {
 }
 
 
-window.onload = (event) => {
-    hideLoader()
-};
+if (window.location.pathname.includes("/projects/index.html")) {
+    window.onload = (event) => {
+        hideLoader()
+    };
+}
