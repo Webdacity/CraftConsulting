@@ -273,6 +273,7 @@
 
     .service-logos__container img {
         width: 6rem;
+        height: 6rem;
     }
 
     .service-logos__container.register-logos img {
