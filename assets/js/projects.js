@@ -87,6 +87,8 @@ const loadProject = () => {
 
             $(".project-under-construction").html(`${project.underConstruction ? "- Under Construction -" : ""}`)
 
+            hideLoader()
+
             // Insert Logos
             $(".project-logos").empty();
             project.association.forEach(image => {
@@ -97,7 +99,6 @@ const loadProject = () => {
                 )
             })
 
-            hideLoader()
 
             // Insert Project Images
             $(".project-modal .project-images-grid").empty();
