@@ -225,34 +225,34 @@ const prevProjectImageModal = () => {
 }
 
 
-// // Arrow keys / Swipe
-// $(document).keydown(function (e) {
+// Arrow keys / Swipe
+$(document).keydown(function (e) {
 
-//     if (e.which == 37) { //Left
-//         if ($(".project-image-modal").hasClass("active")) {
-//             prevProjectImageModal()
-//         }
-//     }
+    if (e.which == 37) { //Left
+        if ($(".project-image-modal").hasClass("active")) {
+            prevProjectImageModal()
+        }
+    }
 
-//     if (e.which == 39) { //Right
-//         if ($(".project-image-modal").hasClass("active")) {
-//             nextProjectImageModal()
-//         }
-//     }
-// });
+    if (e.which == 39) { //Right
+        if ($(".project-image-modal").hasClass("active")) {
+            nextProjectImageModal()
+        }
+    }
+});
 
-// var myElement = document.getElementById("project-modal-image")
+var myElement = document.getElementById("project-modal-image")
 
-// // create a simple instance
-// // by default, it only adds horizontal recognizers
-// var mc = new Hammer(myElement);
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
 
-// // listen to events...
-// mc.on("swiperight", function (ev) {
-//     prevProjectImageModal()
-// });
+// listen to events...
+mc.on("swiperight", function (ev) {
+    prevProjectImageModal()
+});
 
-// mc.on("swipeleft", function (ev) {
-//     nextProjectImageModal()
-// });
+mc.on("swipeleft", function (ev) {
+    nextProjectImageModal()
+});
 
