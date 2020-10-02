@@ -831,12 +831,33 @@ footer a i {
 
 .contact-grid {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding-top: 2rem;
 }
 
+.contact-affiliations {
+    width: auto;
+    padding-right: 2rem;
+}
+
+.contact-affiliations img {
+    width: 10rem;
+    margin: 0.5rem 0;
+}
+
+.contact-affiliations img:nth-child(3) {
+    margin-top: 2rem;
+}
+
+.contact-affiliations p {
+    color: var(--off-white);
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
 .contact-map {
-    width: 55%;
+    width: 35%;
+    padding-right: 2rem;
 }
 
 .contact-map iframe {
@@ -845,12 +866,12 @@ footer a i {
 }
 
 .contact-details {
-    width: 40%;
+    width: auto;
     border-left: 2px solid var(--green);
     padding-left: 1rem;
 }
 
-.contact-details a {
+.contact-grid a {
     display: flex;
     color: var(--off-white);
     align-items: center;
@@ -864,13 +885,14 @@ footer a i {
     -o-transition: 0.5s ease;
 }
 
-.contact-details a:hover {
+.contact-grid a:hover {
     color: var(--green);
 }
 
-.contact-details a i {
+.contact-grid a i {
     color: var(--green);
     margin-right: 0.5rem;
+    font-size: 1rem;
 }
 
 .contact-details h4 {

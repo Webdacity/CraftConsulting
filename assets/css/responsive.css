@@ -10,6 +10,18 @@
         max-height: 20rem;
     }
 
+    .contact-grid {
+        flex-wrap: wrap;
+    }
+
+    .contact-map {
+        order: 3;
+        width: 100%;
+        margin-top: 3rem;
+        height: 45vh;
+        padding: 0;
+    }
+
 
 }
 
@@ -81,8 +93,8 @@
         flex-wrap: wrap;
     }
 
-    .contact-grid {
-        flex-direction: column-reverse;
+    .contact-affiliations {
+        order: 2;
     }
 
     .services-grid div,
