@@ -40,7 +40,6 @@ const loadAllProjects = () => {
 
 
 window.onload = (event) => {
-    hideLoader()
     loadAllProjects();
     checkCategory()
 };
@@ -115,7 +114,6 @@ const closeProjectModal = () => {
 }
 
 const loadProject = () => {
-    showLoader()
     $(".project-modal").fadeIn(1000);
     $("html, body").addClass("no-scroll");
 
