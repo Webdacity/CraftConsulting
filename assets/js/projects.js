@@ -162,6 +162,7 @@ const loadProject = () => {
             }
 
             // Insert Data
+            document.title = project.name
             $(".project-name").html(project.name)
             $(".project-type span").html(project.type)
             $(".project-date span").html(project.date)

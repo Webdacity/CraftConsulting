@@ -14,7 +14,7 @@
         "association": ["RobertSilke", "S&T-Consulting"],
         "type": "Single Residential",
         "images": 9,
-        "construction": 23
+        "construction": 21
 
     },
     {
@@ -47,7 +47,7 @@
     },
     {
         "name": "111 OVD",
-        "location": "2111 Ocean View Drive, Fresnaye",
+        "location": "111 Ocean View Drive, Fresnaye",
         "date": "2019",
         "association": ["BBB-Architects", "S&T-Consulting"],
         "type": "Single Residential",
@@ -71,7 +71,7 @@
         "association": ["BBB-Architects", "S&T-Consulting"],
         "type": "Multi Residential",
         "images": 1,
-        "construction": 11
+        "construction": 10
     },
     {
         "name": "The Residence",
@@ -163,7 +163,8 @@
         "type": "Commercial",
         "association": ["Qunu"],
         "images": 1,
-        "construction": 2
+        "construction": 2,
+        "underConstruction": true
     },
     {
         "name": "Clara Anna Fontein",
@@ -171,7 +172,7 @@
         "date": "2019",
         "association": ["VernonViljoen", "S&T-Consulting"],
         "type": "Commercial",
-        "images": 3,
+        "images": 2,
         "construction": 21
     },
     {
