@@ -840,6 +840,7 @@ footer a i {
 .contact-affiliations {
     width: 30%;
     padding-right: 2rem;
+    margin-left: 10%;
 }
 
 .contact-affiliations h5 {
@@ -878,7 +879,7 @@ footer a i {
 }
 
 .contact-details {
-    width: 30%;
+    width: 20%;
     border-left: 2px solid var(--green);
     padding: 0 1rem;
     display: flex;
