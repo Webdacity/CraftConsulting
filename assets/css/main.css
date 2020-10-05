@@ -842,6 +842,15 @@ footer a i {
     padding-right: 2rem;
 }
 
+.contact-affiliations h5 {
+    margin: 0;
+    margin-bottom: 1rem;
+    border-left: 2px solid var(--green);
+    padding: 0 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
 .contact-affiliations img {
     width: 90%;
     margin: 0.5rem 0;
@@ -870,7 +879,7 @@ footer a i {
 .contact-details {
     width: 30%;
     border-left: 2px solid var(--green);
-    padding-left: 1rem;
+    padding: 0 1rem;
 }
 
 .contact-grid a {
