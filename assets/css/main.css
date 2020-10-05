@@ -864,6 +864,7 @@ footer a i {
     color: var(--off-white);
     font-size: 0.9rem;
     margin-top: 2rem;
+    margin-bottom: 0;
 }
 
 .contact-map {
@@ -880,6 +881,10 @@ footer a i {
     width: 30%;
     border-left: 2px solid var(--green);
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .contact-grid a {
