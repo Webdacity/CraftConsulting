@@ -20,7 +20,7 @@ const loadAllProjects = () => {
                 let imageName = project.name.replace(/ /g, "-");
                 $(`#${projectGrid}`).append(`
                     <div class="project">
-                    <img class="project-image" src="/assets/images/projects/${project.type}/${project.name}/${imageName}-(T).jpg" alt="${project.name}">
+                    <img class="project-image" loading="lazy" src="/assets/images/projects/${project.type}/${project.name}/${imageName}-(T).jpg" alt="${project.name}">
                         <a class="project-inner" href="/projects/index.html#${project.name}">
                             <h3>${project.name}</h3>
                             ${project.underConstruction ? "<h5> - Under Construction - </h5>" : ""}
