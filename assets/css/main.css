@@ -516,13 +516,11 @@ footer a i {
     margin-bottom: 0.5rem;
 }
 
-.section-landing .covid p:nth-child(2) {
-    color: red;
+.section-landing .covid a {
+    color: white;
 }
 
-.section-landing .covid p:nth-child(2) a {
-    color: red;
-}
+
 
 
 .landing-social {
@@ -832,15 +830,13 @@ footer a i {
 
 .contact-grid {
     display: flex;
-    /* justify-content: space-between; */
     padding-top: 2rem;
 }
 
 
 .contact-affiliations {
     width: 30%;
-    padding-right: 2rem;
-    margin-left: 10%;
+    margin-left: 3rem;
 }
 
 .contact-affiliations h5 {
@@ -869,8 +865,7 @@ footer a i {
 }
 
 .contact-map {
-    width: 30%;
-    padding-right: 2rem;
+    width: 40%;
 }
 
 .contact-map iframe {
